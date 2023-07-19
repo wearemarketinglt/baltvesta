@@ -1,0 +1,19 @@
+:root {
+  --blue-color: #D8F1FC;
+  --darkblue-color: #0B3954;
+  --grey-color: #8C98A4;
+  --white-color: #fff;
+  --font-body: 'Mersad';
+  --color-bg-0: #78F9D4;
+  --color-theme-1: #78F9D4;
+  --color-theme-2: #3078DB;
+  --color-theme-3: #003D3B;
+  --color-theme-4: #59D5FC;
+  --color-text: #003D3B;
+  --color-white: #fff;
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  font-family: var(--font-body);
+  color: var(--darkblue-color);
+  --tr-all: all 0.3s ease-in-out;
+}
