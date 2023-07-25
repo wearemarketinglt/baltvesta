@@ -70,9 +70,9 @@
 </script>
 
 <main class="page-about">
-    <section class="top-block">
+    <section class="top-block md:pb-0 pb-12">
         <div class="container mx-auto">
-            <div class="pt-48 relative">
+            <div class="md:pt-48 pt-24 relative">
                 <div class="lines absolute w-full h-full flex justify-between">
                     <span></span>
                     <span></span>
@@ -85,7 +85,7 @@
                         <br>and Development</h1>
                     <p class="text-center">At Baltvesta, we are driven by a passion to achieve long-term growth and <br>development
                         through strategic investments and partnerships.</p>
-                    <div class="image relative mt-28">
+                    <div class="image relative md:mt-28 mt-20">
                         <img class="rounded-md" src="/images/about.jpg" alt="">
                     </div>
 
@@ -93,10 +93,10 @@
             </div>
         </div>
     </section>
-    <section class="text-block pt-20 pb-14">
+    <section class="text-block md:pt-20 md:pb-14 pt-12 pb-12">
         <div class="container mx-auto">
             <span class="inline-block">Our story</span>
-            <div class="text my-5 w-10/12 pr-16">
+            <div class="text mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
                 <h3>Our story began with a passion for investing and a commitment to creating value for our clients.
                     Founded
                     in Lithuania, we have since expanded our reach to other European countries, bringing our expertise
@@ -106,22 +106,22 @@
             </div>
         </div>
     </section>
-    <section class="carousel-section pt-14 pb-32">
+    <section class="carousel-section md:pt-14 pt-12 md:pb-32 pb-12 overflow-hidden">
         <div class="container mx-auto">
             <h5 class="mb-16">From Our Roots to the Present:
                 <br>Our Journey in Investing</h5>
             <Carousel slides={template1Slides}/>
         </div>
     </section>
-    <section class="approach-section pt-28 pb-11">
+    <section class="approach-section md:pt-28 md:pb-11 pt-12 pb-12">
         <div class="container mx-auto">
-            <div class="flex gap72">
-                <div class="w-4/12 px-3">
+            <div class="flex lg:flex-row flex-col gap72">
+                <div class="lg:w-4/12 w-12/12 px-3 lg:mb-0 mb-12">
                     <span class="inline-block mb-6">OUR APPROACH</span>
                     <h5>Disciplined investment approach that is rooted in our core principles of integrity,
                         transparency, and long-term value creation.</h5>
                 </div>
-                <div class="boxes w-8/12 grid grid-cols-2 gap-x-6 gap-y-6">
+                <div class="boxes lg:w-8/12 w-12/12 grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-6">
                     <div class="box px-3">
                         <img class="mb-3.5" src="/images/kringel.svg" alt="">
                         <h6 class="mb-3.5">Disciplined Approach</h6>
@@ -156,9 +156,9 @@
     </section>
     <section class="cards-block">
         <div class="container mx-auto">
-            <div class="w-12/12 py-32">
+            <div class="w-12/12 md:py-32 py-12">
                 <span class="inline-block">Investment FOCUS</span>
-                <div class="mb-24">
+                <div class="md:mb-24 mb-12">
                     <h2 class="my-5">Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise
                     </h2>
                 </div>
@@ -189,7 +189,7 @@
     </section>
     <section class="tabs-section">
         <div class="container mx-auto">
-            <div class="pt-28 pb-20 relative px-3">
+            <div class="md:pt-28 pt-12 md:pb-20 pb-12 relative px-3">
                 <div class="lines absolute w-full h-full flex justify-between">
                     <span></span>
                     <span></span>
@@ -201,9 +201,9 @@
                     <span class="inline-block mb-6">our operating businesses</span>
                     <h2>Forward Thinking
                         <br>Businesses</h2>
-                    <div class="flex pt-28">
-                        <div class="w-3/12 tabs">
-                            <ul>
+                    <div class="flex md:flex-row flex-col md:pt-28 pt-12">
+                        <div class="md:w-3/12 w-12/12 tabs md:mb-0 mb-12">
+                            <ul class="md:block flex md:overflow-x-visible overflow-x-scroll">
                                 <span class="indicator"></span>
                                 <li>Metal processing</li>
                                 <li>Real estate</li>
@@ -212,7 +212,7 @@
                             </ul>
                         </div>
                         <div class="w-1/12"></div>
-                        <div class="w-8/12 tab-contents">
+                        <div class="md:w-8/12 w-12/12 tab-contents">
                             <div class="content">
                                 <div class="single">
                                     <img src="/images/tabimg.svg" alt="">
@@ -231,7 +231,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -263,7 +263,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -295,7 +295,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -329,7 +329,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -361,7 +361,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -393,7 +393,7 @@
                                             industrial and agricultural customers.</p>
                                         <a href="">Discover more</a>
                                     </div>
-                                    <div class="row grid grid-cols-3">
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                         <div class="col">
                                             <h3>3</h3>
                                             <p>Unique metal processing companies</p>
@@ -431,6 +431,9 @@
       height: 240px;
       background: var(--white-color);
       z-index: 1;
+      @media screen and (max-width: 767px) {
+        height: 20%;
+      }
     }
 
     .image {
@@ -475,6 +478,9 @@
       ul {
         border-left: 3px solid rgba(140, 152, 164, 0.10);
         position: relative;
+        @media screen and (max-width: 767px) {
+          border-left: unset;
+        }
         .indicator {
           position: absolute;
           top: 0;
@@ -483,12 +489,20 @@
           background: var(--darkblue-color);
           padding: 0;
           transition: var(--tr-all);
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
         }
         li {
           padding: 8px 19px;
           color: var(--grey-color);
           cursor: pointer;
           transition: var(--tr-all);
+          @media screen and (max-width: 767px) {
+            flex: 1;
+            width: 100%;
+            white-space: nowrap;
+          }
           &:global(.active) {
             color: var(--darkblue-color);
           }
@@ -520,6 +534,8 @@
           }
           .row {
             .col {
+              max-width: 185px;
+              width: 100%;
               h3 {
                 margin-bottom: 16px;
               }

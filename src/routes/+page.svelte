@@ -2,16 +2,15 @@
     import Button from '$lib/components/Button.svelte';
     import Card from '$lib/components/Card.svelte';
 
-    function handleClick() {
-        console.log('Button clicked!');
-    }
+    // export let data
+
 
 </script>
 
 <main class="home-page">
     <section class="top-block">
         <div class="container mx-auto">
-            <div class="flex items-center py-48 relative">
+            <div class="flex md:flex-row flex-col items-center md:pt-48 md:pb-48 pt-24 pb-24 relative">
                 <div class="lines absolute w-full h-full flex justify-between">
                     <span></span>
                     <span></span>
@@ -19,20 +18,18 @@
                     <span></span>
                     <span></span>
                 </div>
-                <div class="w-5/12 px-3 relative">
+                <div class="md:w-5/12 w-12/12 md:mb-0 mb-12 px-3 relative">
                     <div class="title">
-                        <h1>Invest with <br>Purpose, Invest <br>for the Future</h1>
+                        <h1 class="mb-[23px]">Invest with Purpose, Invest for the Future</h1>
                     </div>
                     <div class="text">
                         <p>Make a positive impact and achieve long-term financial success by investing in our portfolio
-                            of
-                            sustainable and socially responsible companies in the metal processing and real estate
-                            industries
-                            throughout Europe.</p>
+                            of sustainable and socially responsible companies in the metal processing and real estate
+                            industries throughout Europe.</p>
                     </div>
                 </div>
                 <div class="w-1/12 px-3"></div>
-                <div class="w-6/12 px-3 relative">
+                <div class="md:w-6/12 w-12/12 px-3 relative">
                     <div class="image-container">
                         <img class="rounded-md withbg relative" src="/images/heroimg.jpg" alt="">
                     </div>
@@ -43,7 +40,7 @@
     </section>
     <section class="since-block">
         <div class="container mx-auto">
-            <div class="w-12/12 py-32">
+            <div class="w-12/12 lg:py-32 md:py-20 py-12">
                 <span class="inline-block">since 2007</span>
                 <div class="text my-5">
                     <h3>At Baltvesta, we are passionate about driving growth and profitability for our portfolio
@@ -52,29 +49,30 @@
                         throughout Europe, and actively participating in their development to unlock their full
                         potential.</h3>
                 </div>
-                <Button href="https://example.com">
+                <Button href="/about">
                     About us
                 </Button>
-                <div class="grid grid-cols-3 gap-20 mt-20">
+                <div class="grid md:grid-cols-3 grid-cols-1 lg:gap-20 gap-10 mt-20">
                     <div class="w-full">
+                        <!--{pro.Icon.data.attributes.url}-->
                         <img class="sign mb-5" src="/images/Frame.svg" alt="">
                         <h4 class="mb-5">Industry Expertise</h4>
                         <p>Deep industry expertise in metal processing and real estate, allowing identification of
                             high-potential companies and maximizing their potential.</p>
                     </div>
                     <div class="w-full">
+                        <!--{pro.Icon.data.attributes.url}-->
                         <img class="sign mb-5" src="/images/Frame1.svg" alt="">
                         <h4 class="mb-5">Strategic Partnership</h4>
                         <p>Collaborative approach to investing, working closely with portfolio company executives to
                             provide strategic guidance and operational support.</p>
-
                     </div>
                     <div class="w-full">
+                        <!--{pro.Icon.data.attributes.url}-->
                         <img class="sign mb-5" src="/images/Frame2.svg" alt="">
                         <h4 class="mb-5">Exceptional Returns</h4>
                         <p>Dedicated to delivering exceptional returns with integrity, transparency, and a long-term
                             investment approach.</p>
-
                     </div>
                 </div>
             </div>
@@ -82,9 +80,9 @@
     </section>
     <section class="cards-block">
         <div class="container mx-auto">
-            <div class="w-12/12 py-32">
+            <div class="w-12/12 lg:py-32 md:py-20 py-12">
                 <span class="inline-block">Investment FOCUS</span>
-                <div class="mb-24">
+                <div class="md:mb-24 mb-12">
                     <h2 class="my-5">Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise
                     </h2>
                 </div>
@@ -113,14 +111,14 @@
             </div>
         </div>
     </section>
-    <section class="investments-block mb-40">
+    <section class="investments-block md:mb-40 mb-12 lg:pt-0 pt-12">
         <div class="container mx-auto">
-            <span class="block text-center">
+            <span class="block md:text-center">
                 EXITS
             </span>
-            <h2 class="text-center my-5">Uncovering the Best
+            <h2 class="md:text-center my-5">Uncovering the Best
                 <br>Investments Across Europe</h2>
-            <div class="grid grid-cols-3 gap-20 mt-20">
+            <div class="grid md:grid-cols-3 grid-cols-1 ld:gap-20 gap-10 md:mt-20 mt-12">
                 <div class="w-full">
                     <h4 class="mb-5">Pharmacy</h4>
                     <div class="mb-4">
@@ -158,26 +156,31 @@
       left: 0;
       bottom: 0;
       transform: translateX(-18.3%) translateY(36.6%);
-    }
-
-    .image-container {
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--darkblue-color);
-        transform: translateX(9.21%) translateY(9.5%);
-        border-radius: 0.375rem;
+      @media screen and (max-width: 767px) {
+        max-width: 40%;
       }
     }
-  }
-
-  .since-block {
-    .sign {
-      max-width: 48px;
+      .image-container {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--darkblue-color);
+          transform: translateX(9.21%) translateY(9.5%);
+          border-radius: 0.375rem;
+          @media screen and (max-width: 767px) {
+            transform: translateX(5%) translateY(5%);;
+          }
+        }
+      }
     }
-  }
+
+    .since-block {
+      .sign {
+        max-width: 48px;
+      }
+    }
 </style>

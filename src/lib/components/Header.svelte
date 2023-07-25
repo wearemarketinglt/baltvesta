@@ -14,30 +14,95 @@
         if (window.pageYOffset >= 1) {
             header.classList.add('scrolled');
         }
+
+        const ham = document.querySelector('.ham');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const html = document.querySelector('html');
+
+        document.querySelector('.ham').addEventListener('click', (e) => {
+            ham.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            html.classList.toggle('nav-open');
+
+            if (html.classList.contains('nav-open')) {
+                // Add CSS to disable scrolling
+                html.style.overflow = 'hidden';
+            } else {
+                // Remove CSS to re-enable scrolling
+                html.style.overflow = '';
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(value => {
+            value.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                html.classList.remove('nav-open');
+                html.style.overflow = '';
+                ham.classList.remove('active');
+            })
+        })
+
+        document.querySelector('.logo').addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            html.classList.remove('nav-open');
+            html.style.overflow = '';
+            ham.classList.remove('active');
+        });
+
     });
 </script>
 
 <header id="header" class="header">
     <div class="container mx-auto">
-        <div class="flex justify-between items-center">
-            <a href="/"><img class="logo" src="/images/logo.svg" alt=""></a>
-            <ul class="flex">
+        <div class="px-3">
+            <div class="flex justify-between items-center">
+                <a href="/"><img class="logo" src="/images/logo.svg" alt=""></a>
+                <ul class="lg:flex hidden">
+                    <li>
+                        <a href="/about">About us</a>
+                    </li>
+                    <li>
+                        <a href="">Investments</a>
+                    </li>
+                    <li>
+                        <a href="/exits">Exits</a>
+                    </li>
+                    <li>
+                        <a href="/contacts">Contact us</a>
+                    </li>
+                </ul>
+                <div class="ham lg:hidden flex">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-nav lg:hidden flex">
+    <div class="container mx-auto">
+        <div class="px-3">
+            <ul class="flex flex-col gap-6">
                 <li>
-                    <a href="/about">About us</a>
+                    <a class="nav-link" href="/about">About us</a>
                 </li>
                 <li>
-                    <a href="">Investments</a>
+                    <a class="nav-link" href="">Investments</a>
                 </li>
                 <li>
-                    <a href="">Exits</a>
+                    <a class="nav-link" href="/exits">Exits</a>
                 </li>
                 <li>
-                    <a href="">Contact us</a>
+                    <a class="nav-link" href="/contacts">Contact us</a>
                 </li>
             </ul>
         </div>
     </div>
-</header>
+</div>
 
 <style lang="scss">
 
@@ -53,6 +118,9 @@
     &
     .logo {
       max-width: 183px;
+      @media screen and (max-width: 500px){
+        max-width: 120px;
+      }
     }
 
     ul {
@@ -65,7 +133,165 @@
     }
   }
 
+  .ham {
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    .lines {
+      width: 14px;
+      height: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s ease-in-out;
 
+      span {
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background: rgba(41, 39, 41, 0.6);
+        border-radius: 20px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        &:nth-of-type(1) {
+
+        }
+        &:nth-of-type(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+    }
+    &:global(.active) {
+      .lines {
+        height: 16px;
+        @media screen and (max-width: 500px) {
+          height: 16px;
+        }
+      }
+      .lines span:nth-of-type(1) {
+        transform: rotate(45deg);
+        transform-origin: left;
+        width: 20px;
+        @media screen and (max-width: 500px) {
+          width: 20px;
+        }
+      }
+      .lines span:nth-of-type(2) {
+        opacity: 0;
+      }
+      .lines span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        transform-origin: left;
+        width: 20px;
+        @media screen and (max-width: 500px) {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--blue-color);
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    &:global(.active) {
+      transform: translateX(0);
+    }
+    .content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .navigation {
+        flex-grow: 1;
+        display: flex;
+        padding: 120px 0 100px 0;
+      }
+      .absolut {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .buttons {
+          margin-bottom: 30px;
+          .container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            flex-wrap: wrap;
+          }
+        }
+        .line {
+          padding: 15px 0;
+          background: var(--blue-color);
+        }
+      }
+
+      .container {
+
+        .navtop {
+          margin-bottom: 40px;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              margin-bottom: 20px;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+              a {
+                font-size: 30px;
+                line-height: 1.2;
+                color: var(--blue-color);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .navbottom {
+          margin-bottom: 40px;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              margin-bottom: 20px;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+              a {
+                font-size: 20px;
+                line-height: 1.2;
+                color: var(--blue-color);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 10px;
+          row-gap: 20px;
+        }
+      }
+    }
+
+  }
 
 
 </style>

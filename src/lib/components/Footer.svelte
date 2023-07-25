@@ -3,17 +3,17 @@
 </script>
 
 <div class="cta">
-    <div class="container mx-auto">
-        <div class="top py-24">
-            <div class="w-full flex">
-                <div class="w-6/12">
+    <div class="container relative mx-auto">
+        <div class="top md:py-24 py-12">
+            <div class="w-full flex md:flex-row flex-col">
+                <div class="md:w-6/12 w-12/12">
                     <h2 class="mb-5">Experience the Power of
                         Strategic Investing</h2>
                     <p>Contact us today to learn more about how we can help you maximize your investment potential.</p>
                 </div>
                 <div class="w-2/12"></div>
-                <div class="w-3/12 flex justify-center items-center">
-                    <Button href="https://example.com">
+                <div class="md:w-3/12 w-12/12 md:mt-0 mt-12 flex md:justify-center md:items-center items-start">
+                    <Button href="/contacts">
                         Get in touch
                     </Button>
                 </div>
@@ -24,10 +24,10 @@
 </div>
 <footer class="footer">
     <div class="container mx-auto">
-        <div class="top mb-24">
-            <div class="flex justify-between items-center">
+        <div class="top md:mb-24 mb-12">
+            <div class="flex md:flex-row flex-col justify-between md:items-center items-start">
                 <img class="logo" src="/images/logowhite.svg" alt="">
-                <ul class="flex">
+                <ul class="flex md:flex-row flex-col">
                     <li>
                         <a href="">About us</a>
                     </li>
@@ -56,14 +56,27 @@
 <style lang="scss">
     .cta {
       background: var(--blue-color);
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0B3954;
+        opacity: 3%;
+      }
     }
 
     .footer {
       background: var(--darkblue-color);
       padding: 55px 0 36px 0;
+
       * {
         color: var(--white-color);
       }
+
     }
 
     .logo {
@@ -72,6 +85,10 @@
 
     ul {
       gap: 34px;
+      @media (max-width: 768px) {
+        gap: 24px;
+        margin-top: 50px;
+      }
       li {
         a {
           color: var(--white-color);

@@ -12,8 +12,8 @@
 </script>
 
 
-<div class="card flex items-center py-16">
-    <div class="w-6/12 left-side">
+<div class="card flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 items-center lg:py-16 lg:p-0 md:p-14 p-8">
+    <div class="lg:w-6/12 w-12/12 left-side">
         <span class="inline-block mb-7">{label}</span>
         <h3 class="mb-5">{title}</h3>
         <div class="text mb-5">
@@ -30,7 +30,7 @@
             {buttonText}
         </Button>
     </div>
-    <div class="w-6/12">
+    <div class="lg:w-6/12 w-12/12">
         <img class="rounded-md" src="{imageUrl}" alt="">
     </div>
 
@@ -40,7 +40,9 @@
   .card {
     position: relative;
     margin-bottom: 100px;
-
+    @media screen and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -51,11 +53,16 @@
       background: var(--blue-color);
       z-index: -1;
       border-radius: 0.375rem;
+      @media (max-width: 1023px) {
+        width: 100%;
+      }
     }
 
     &:nth-of-type(odd) {
       flex-direction: row-reverse;
-
+      @media (max-width: 1023px) {
+        flex-direction: column-reverse;
+      }
       &:before {
         left: unset;
         right: 0;
@@ -68,5 +75,8 @@
 
   .left-side {
     padding: 0 75px;
+    @media (max-width: 1023px) {
+      padding: 0;
+    }
   }
 </style>
