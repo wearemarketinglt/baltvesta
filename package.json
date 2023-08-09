@@ -23,6 +23,8 @@
 		"@studio-freight/lenis": "^1.0.19",
 		"axios": "^1.4.0",
 		"bootstrap": "^5.3.0",
-		"embla-carousel-svelte": "^8.0.0-rc07"
+		"embla-carousel-svelte": "^8.0.0-rc07",
+		"gsap": "^3.12.2",
+		"splitting": "^1.0.6"
 	}
 }

@@ -2,7 +2,7 @@
     <section class="contacts-section">
         <div class="container mx-auto">
             <div class="md:pt-48 pt-24 pb-20 relative px-3">
-                <span class="inline-block mb-6">Contact us</span>
+                <span class="inline-block mb-6 uppercase">Contact us</span>
                 <h1>Get in Touch with Us and <br>Discover the Opportunities</h1>
                 <div class="flex mt-[48px] mb-[64px] md:flex-row flex-col-reverse">
                     <div class="md:w-6/12 w-12/12 right">
@@ -51,9 +51,13 @@
                             <label>
                                 Contact us by phone or location
                                 <ul class="mt-[25px]">
-                                    <li><img src="/images/pin.svg" alt=""><a href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos av. 7, LT-09308 Vilnius</a></li>
-                                    <li><img src="/images/phone.svg" alt=""><a href="tel:+370 668 97952">+370 668 97952</a></li>
-                                    <li><img src="/images/mail.svg" alt=""><a href="mailto:office@baltvesta.lt">office@baltvesta.lt</a></li>
+                                    <li><img src="/images/pin.svg" alt=""><a
+                                            href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos
+                                        av. 7, LT-09308 Vilnius</a></li>
+                                    <li><img src="/images/phone.svg" alt=""><a href="tel:+370 668 97952">+370 668
+                                        97952</a></li>
+                                    <li><img src="/images/mail.svg" alt=""><a href="mailto:office@baltvesta.lt">office@baltvesta.lt</a>
+                                    </li>
                                 </ul>
                             </label>
                         </div>
@@ -61,9 +65,13 @@
                             <label>
                                 Interested in renting
                                 <ul class="mt-[25px]">
-                                    <li><img src="/images/pin.svg" alt=""><a href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos av. 7, LT-09308 Vilnius</a></li>
-                                    <li><img src="/images/phone.svg" alt=""><a href="tel:+370 668 97952">+370 668 97952</a></li>
-                                    <li><img src="/images/mail.svg" alt=""><a href="mailto:office@baltvesta.lt">office@baltvesta.lt</a></li>
+                                    <li><img src="/images/pin.svg" alt=""><a
+                                            href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos
+                                        av. 7, LT-09308 Vilnius</a></li>
+                                    <li><img src="/images/phone.svg" alt=""><a href="tel:+370 668 97952">+370 668
+                                        97952</a></li>
+                                    <li><img src="/images/mail.svg" alt=""><a href="mailto:office@baltvesta.lt">office@baltvesta.lt</a>
+                                    </li>
                                 </ul>
                             </label>
                         </div>
@@ -79,12 +87,29 @@
     background: var(--blue-color);
 
     .right {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--darkblue-color);
+        border-radius: 0.375rem;
+        right: -23px;
+        top: 23px;
+        z-index: 0;
+      }
+
       .form {
         background: var(--white-color);
         padding: 32px 32px 74px 32px;
         display: flex;
         flex-direction: column;
         gap: 34px;
+        position: relative;
+
 
         .row {
           gap: 24px;
@@ -111,9 +136,11 @@
             font-size: 16px;
           }
         }
+
         textarea {
           height: 116px;
         }
+
         select {
           margin-top: 10px;
         }

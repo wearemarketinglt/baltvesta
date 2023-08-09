@@ -1,44 +1,69 @@
 <script>
     import Carousel from "$lib/components/Carousel.svelte";
     import Card from "$lib/components/Card.svelte";
-    import {onMount} from 'svelte';
 
-    onMount(() => {
+    import { initializePreloaderAbout } from '$lib/animations';
+    import { initializeGsapTextScrollAnimation } from '$lib/animations'
+
+    import { onMount, tick } from 'svelte';
+
+    let activeTab = 0; // Set the default active tab
+
+    // Get the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeTabParam = urlParams.get('activeTab');
+    activeTab = parseInt(activeTabParam, 10) || 0;
+
+    onMount(async() => {
+        await tick(); // Wait for the component to render
+
+        initializePreloaderAbout();
+        initializeGsapTextScrollAnimation();
+
+
+
         const items = document.querySelectorAll('.tabs ul li');
         const indicator = document.querySelector('.tabs ul .indicator');
         const tabsContent = document.querySelectorAll('.tab-contents .content');
 
-        const firstItem = items[0]; // Select the first list item
-        const firstContent = tabsContent[0]; // Select the first content
-        // Add 'active' class to the first item
-        firstItem.classList.add('active');
-        // Add 'active' class to the first content
-        firstContent.classList.add('active');
+        function activateTab(index) {
+            items.forEach(item => item.classList.remove('active'));
+            items[index].classList.add('active');
 
-        const activeItem = document.querySelector('.tabs ul li.active');
-        if (activeItem) {
-            const activeItemHeight = activeItem.offsetHeight;
-            const activeItemOffsetTop = activeItem.offsetTop;
+            const activeItemHeight = items[index].offsetHeight;
+            const activeItemOffsetTop = items[index].offsetTop;
             indicator.style.height = `${activeItemHeight}px`;
             indicator.style.transform = `translateY(${activeItemOffsetTop}px)`;
+
+            tabsContent.forEach(content => content.classList.remove('active'));
+            tabsContent[index].classList.add('active');
+        }
+
+// Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const activeTabParam = urlParams.get('activeTab');
+        const activeTabIndex = parseInt(activeTabParam, 10) || 0;
+
+// Activate the tab based on the URL parameter
+        if (activeTabIndex >= 0 && activeTabIndex < items.length) {
+            activateTab(activeTabIndex);
+
+            // Check if the activeTabParam is present in the URL
+            const forwardThinkingSection = document.getElementById('forwardthinking');
+            if (forwardThinkingSection && activeTabParam !== null) {
+                forwardThinkingSection.style.scrollMarginTop = '100px'; // Adjust the value as needed
+                forwardThinkingSection.focus();
+            }
         }
 
         items.forEach((item, index) => {
             item.addEventListener('click', () => {
-                items.forEach((i) => i.classList.remove('active'));
-                item.classList.add('active');
-
-                const activeItemHeight = item.offsetHeight;
-                const activeItemOffsetTop = item.offsetTop;
-                indicator.style.height = `${activeItemHeight}px`;
-                indicator.style.transform = `translateY(${activeItemOffsetTop}px)`;
-
-                // Activate corresponding tabsContent
-                tabsContent.forEach((content) => {
-                    content.classList.remove('active');
-                });
-                tabsContent[index].classList.add('active');
+                activateTab(index);
             });
+        });
+
+        window.addEventListener('sveltekit:route-change', () => {
+            // Your code for handling route changes here
         });
     });
 
@@ -70,7 +95,7 @@
 </script>
 
 <main class="page-about">
-    <section class="top-block md:pb-0 pb-12">
+    <section class="top-block md:pb-0 pb-12 animatetopblockabout">
         <div class="container mx-auto">
             <div class="md:pt-48 pt-24 relative">
                 <div class="lines absolute w-full h-full flex justify-between">
@@ -87,6 +112,7 @@
                         through strategic investments and partnerships.</p>
                     <div class="image relative md:mt-28 mt-20">
                         <img class="rounded-md" src="/images/about.jpg" alt="">
+                        <div class="before"></div>
                     </div>
 
                 </div>
@@ -95,14 +121,16 @@
     </section>
     <section class="text-block md:pt-20 md:pb-14 pt-12 pb-12">
         <div class="container mx-auto">
-            <span class="inline-block">Our story</span>
-            <div class="text mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
-                <h3>Our story began with a passion for investing and a commitment to creating value for our clients.
-                    Founded
-                    in Lithuania, we have since expanded our reach to other European countries, bringing our expertise
-                    and
-                    experience to diverse markets. Our success is rooted in our disciplined investment approach, which
-                    emphasizes long-term value creation and careful risk management.</h3>
+            <div class="text min-h-screen sticky-container mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
+                <div class="sticky">
+                    <span class="inline-block uppercase mb-[20px] subtitle">Our story</span>
+                    <h3 class="content__title" data-splitting data-effect16>Our story began with a passion for investing and a commitment to creating value for our clients.
+                        Founded
+                        in Lithuania, we have since expanded our reach to other European countries, bringing our expertise
+                        and
+                        experience to diverse markets. Our success is rooted in our disciplined investment approach, which
+                        emphasizes long-term value creation and careful risk management.</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -117,7 +145,7 @@
         <div class="container mx-auto">
             <div class="flex lg:flex-row flex-col gap72">
                 <div class="lg:w-4/12 w-12/12 px-3 lg:mb-0 mb-12">
-                    <span class="inline-block mb-6">OUR APPROACH</span>
+                    <span class="inline-block mb-6 uppercase">OUR APPROACH</span>
                     <h5>Disciplined investment approach that is rooted in our core principles of integrity,
                         transparency, and long-term value creation.</h5>
                 </div>
@@ -157,7 +185,7 @@
     <section class="cards-block">
         <div class="container mx-auto">
             <div class="w-12/12 md:py-32 py-12">
-                <span class="inline-block">Investment FOCUS</span>
+                <span class="inline-block uppercase">Investment FOCUS</span>
                 <div class="md:mb-24 mb-12">
                     <h2 class="my-5">Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise
                     </h2>
@@ -167,27 +195,27 @@
                         title="Investing in the Future of Metal Processing"
                         description="We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field."
                         operatingBusiness="Custom Operating Business"
-                        labelForText="Operating business:"
-                        text="Umega Group, a company dedicated to technological innovation and sustainable practices in the industry."
-                        imageUrl="/images/card.jpg"
-                        buttonUrl="example.com"
-                        buttonText="Learn more"
+                        labelForText=""
+                        text=""
+                        imageUrl="/images/aboutcard1.jpg"
+                        buttonUrl=""
+                        buttonText=""
                 />
                 <Card
                         label="Real estate manaManagement & devedevelopment"
                         title="Building a Sustainable Future for Real Estate"
                         description="Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities."
                         operatingBusiness="Custom Operating Business"
-                        labelForText="Operating business:"
-                        text="We are currently running two commercial real estate projects to expand our portfolio and maximize returns for our investors."
-                        imageUrl="/images/card2.jpg"
-                        buttonUrl="example.com"
-                        buttonText="Learn more"
+                        labelForText=""
+                        text=""
+                        imageUrl="/images/aboutcard2.jpg"
+                        buttonUrl=""
+                        buttonText=""
                 />
             </div>
         </div>
     </section>
-    <section class="tabs-section">
+    <section id="forwardthinking" class="tabs-section">
         <div class="container mx-auto">
             <div class="md:pt-28 pt-12 md:pb-20 pb-12 relative px-3">
                 <div class="lines absolute w-full h-full flex justify-between">
@@ -198,7 +226,7 @@
                     <span></span>
                 </div>
                 <div class="relative">
-                    <span class="inline-block mb-6">our operating businesses</span>
+                    <span class="inline-block mb-6 uppercase">our operating businesses</span>
                     <h2>Forward Thinking
                         <br>Businesses</h2>
                     <div class="flex md:flex-row flex-col md:pt-28 pt-12">
@@ -217,7 +245,7 @@
                                 <div class="single">
                                     <img src="/images/tabimg.svg" alt="">
                                     <div class="title">
-                                        <h3>United by passion
+                                        <h3>United by passion 1
                                             <br>for crafting things that last</h3>
                                     </div>
                                     <div class="text">
@@ -315,7 +343,203 @@
                                 <div class="single">
                                     <img src="/images/tabimg.svg" alt="">
                                     <div class="title">
+                                        <h3>United by passion 2
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
                                         <h3>United by passion
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
+                                        <h3>United by passion
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
+                                        <h3>United by passion 3
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
+                                        <h3>United by passion
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
+                                        <h3>United by passion
+                                            <br>for crafting things that last</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
+                                            industrial metal: we carry out R&D, provide processing services and build a
+                                            range of proprietary products for industrial and agricultural customers.</p>
+                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
+                                            provide processing services and build a range of proprietary products for
+                                            industrial and agricultural customers.</p>
+                                        <a href="">Discover more</a>
+                                    </div>
+                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                        <div class="col">
+                                            <h3>3</h3>
+                                            <p>Unique metal processing companies</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>1,390</h3>
+                                            <p>Employers</p>
+                                        </div>
+                                        <div class="col">
+                                            <h3>12 ml. eur</h3>
+                                            <p>Annual income</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="single">
+                                    <img src="/images/tabimg.svg" alt="">
+                                    <div class="title">
+                                        <h3>United by passion 4
                                             <br>for crafting things that last</h3>
                                     </div>
                                     <div class="text">
@@ -437,12 +661,11 @@
     }
 
     .image {
-      &:before {
+      .before {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%) translateY(-33px);
         width: 91%;
         height: 100%;
         background: var(--darkblue-color);
@@ -518,7 +741,7 @@
         }
         .single {
           &:not(:last-child) {
-            margin-bottom: 60px;
+            margin-bottom: 100px;
           }
           img {
             max-width: 175px;
@@ -543,6 +766,29 @@
           }
         }
       }
+    }
+  }
+
+  .animatetopblockabout {
+    background: transparent;
+    .lines {
+      span {
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+    }
+    h1, p {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    img {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    .before {
+      opacity: 0;
+      transform: translateX(-50%) translateY(0);
+      transform-origin: bottom;
     }
   }
 

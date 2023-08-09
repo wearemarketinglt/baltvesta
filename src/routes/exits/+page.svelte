@@ -10,7 +10,7 @@
                     <span></span>
                 </div>
                 <div class="relative">
-                    <span class="inline-block mb-6">Exits</span>
+                    <span class="inline-block mb-6 uppercase">Exits</span>
                     <h1>Beyond Numbers: The Story of <br>Our Successful Investments</h1>
                     <div class="flex md:pt-28 pt-16">
                         <div class="md:w-8/12 w-12/12 tab-contents">

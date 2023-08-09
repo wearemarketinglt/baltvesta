@@ -1,7 +1,9 @@
 <script>
     import {onMount} from 'svelte';
 
+
     onMount(() => {
+
         const header = document.getElementById('header');
         window.addEventListener('scroll', function () {
             const scroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -59,16 +61,22 @@
                 <a href="/"><img class="logo" src="/images/logo.svg" alt=""></a>
                 <ul class="lg:flex hidden">
                     <li>
-                        <a href="/about">About us</a>
+                        <a class="link dark" href="/about">About us</a>
                     </li>
                     <li>
-                        <a href="">Investments</a>
+                        <a class="link dark" href="/about#forwardthinking">Investments</a>
+                        <ul class="sub-menu rounded-md">
+                            <li><a class="link" href="/about?activeTab=0#forwardthinking">Metal processing</a></li>
+                            <li><a class="link" href="/about?activeTab=1#forwardthinking">Real estate</a></li>
+                            <li><a class="link" href="/about?activeTab=2#forwardthinking">Pharmacy</a></li>
+                            <li><a class="link" href="/about?activeTab=3#forwardthinking">Financial services</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="/exits">Exits</a>
+                        <a class="link dark" href="/exits">Exits</a>
                     </li>
                     <li>
-                        <a href="/contacts">Contact us</a>
+                        <a class="link dark" href="/contacts">Contact us</a>
                     </li>
                 </ul>
                 <div class="ham lg:hidden flex">
@@ -91,7 +99,7 @@
                     <a class="nav-link" href="/about">About us</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="">Investments</a>
+                    <a class="nav-link" href="/about#forwardthinking">Investments</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/exits">Exits</a>
@@ -114,9 +122,21 @@
     z-index: 9999;
     padding-top: 25px;
     transition: var(--tr-all);
-
-    &
-    .logo {
+    //.container {
+    //  @media screen and (min-width: 1536px) {
+    //    max-width: 1920px;
+    //    h1 {
+    //      font-size: 4.5rem;
+    //    }
+    //    p {
+    //      font-size: 1.5rem;
+    //    }
+    //    .image-container {
+    //      height: 45rem;
+    //    }
+    //  }
+    //}
+    &.logo {
       max-width: 183px;
       @media screen and (max-width: 500px){
         max-width: 120px;
@@ -125,6 +145,67 @@
 
     ul {
       gap: 34px;
+      li {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          height: 20px;
+          width: 100%;
+        }
+
+        .sub-menu {
+          list-style: none;
+          position: absolute;
+          top: 100%;
+          left: -50%;
+          width: max-content;
+          background: var(--white-color);
+          padding: 23px 20px;
+          z-index: 100;
+          overflow: hidden;
+          transform: translateY(40px);
+          transform-origin: top left;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .top {
+            .heading {
+              display: none;
+            }
+          }
+
+          li {
+            //padding: 0 8px;
+            padding: 0;
+
+            &:first-of-type {
+              a {
+
+              }
+            }
+
+            a {
+              //color: $green;
+              display: inline-block;
+              align-items: center;
+              gap: 22px;
+            }
+          }
+        }
+        &:hover {
+          .sub-menu {
+            transform: translateY(10px);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
     &:global(.scrolled) {
       padding-top: 13.5px;

@@ -29,16 +29,16 @@
                 <img class="logo" src="/images/logowhite.svg" alt="">
                 <ul class="flex md:flex-row flex-col">
                     <li>
-                        <a href="">About us</a>
+                        <a class="link" href="">About us</a>
                     </li>
                     <li>
-                        <a href="">Investments</a>
+                        <a class="link" href="">Investments</a>
                     </li>
                     <li>
-                        <a href="">Exits</a>
+                        <a class="link" href="">Exits</a>
                     </li>
                     <li>
-                        <a href="">Contact us</a>
+                        <a class="link" href="">Contact us</a>
                     </li>
                 </ul>
             </div>

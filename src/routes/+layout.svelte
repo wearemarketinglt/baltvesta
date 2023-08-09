@@ -1,29 +1,18 @@
 <script>
     import "../app.css";
-    import './style.scss'
+    import './style.scss';
 
-    import Header from '$lib/components/Header.svelte'
-    import Footer from '$lib/components/Footer.svelte'
+    import Header from '$lib/components/Header.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 
-    import Lenis from '@studio-freight/lenis'
-
+    import { initializeLeis } from '$lib/animations';
 
     import { onMount } from 'svelte';
 
     onMount(() => {
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-
-        })
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
+        initializeLeis();
     });
+
 </script>
 
 <Header

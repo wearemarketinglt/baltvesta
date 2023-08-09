@@ -14,21 +14,24 @@
 
 <div class="card flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 items-center lg:py-16 lg:p-0 md:p-14 p-8">
     <div class="lg:w-6/12 w-12/12 left-side">
-        <span class="inline-block mb-7">{label}</span>
+        <span class="inline-block mb-7 uppercase">{label}</span>
         <h3 class="mb-5">{title}</h3>
         <div class="text mb-5">
             <p>{description}</p>
         </div>
+        {#if labelForText && text}
         <label class="">
             {labelForText}
             <div class="text mt-2.5 mb-5">
                 <p>{text}</p>
             </div>
         </label>
-
+        {/if}
+        {#if buttonUrl && buttonText}
         <Button href="{buttonUrl}">
             {buttonText}
         </Button>
+        {/if}
     </div>
     <div class="lg:w-6/12 w-12/12">
         <img class="rounded-md" src="{imageUrl}" alt="">
