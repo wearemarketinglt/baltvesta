@@ -1,47 +1,52 @@
 {
   "home": {
     "topBlockTitle": "Invest with Purpose, Invest for the Future",
-    "topBlockText": "Make a positive impact and achieve long-term financial success by investing in our portfolio of sustainable and socially responsible companies in the metal processing and real estate industries throughout Europe.",
-    "secondBlockSubTitle": "since 2007",
-    "secondBlockText": "At Baltvesta, we are passionate about driving growth and profitability for our portfolio companies, and delivering exceptional returns for our investors. Since 2007, we have been investing in high-potential companies in the metal processing and real estate industries throughout Europe, and actively participating in their development to unlock their full potential.",
+    "topBlockText": "Make a positive impact and achieve long-term financial success by investing in sustainable and socially responsible companies throughout Europe.",
+    "secondBlockSubTitle": "Since 2001",
+    "secondBlockText": "At Baltvesta, we are passionate about driving growth and profitability for our portfolio companies, and delivering exceptional returns for our investors. Since 2001, we have been investing in high-potential companies throughout Europe, and actively participating in their development to unlock their full potential.",
     "seccondBlockButtonText": "About us",
     "seccondBlockButtonLink": "/about",
     "seccondBlockCols": [
       {
+        "img": "/images/Frame1.svg",
         "title": "Industry Expertise",
-        "text": "Deep industry expertise in metal processing and real estate, allowing identification of high-potential companies and maximizing their potential."
+        "text": "Deep industry expertise with a current focus in metal processing and real estate, allowing identification of high-potential companies and maximizing their potential."
       },
       {
+        "img": "/images/Frame.svg",
         "title": "Strategic Partnership",
-        "text": "Collaborative approach to investing, working closely with portfolio company executives to provide strategic guidance and operational support."
+        "text": "Collaborative approach to investing, working closely with portfolio companies executives to provide strategic guidance and operational support."
       },
       {
+        "img": "/images/Frame2.svg",
         "title": "Exceptional Returns",
         "text": "Dedicated to delivering exceptional returns with integrity, transparency, and a long-term investment approach."
       }
     ],
     "thirdBlockSubTitle": "Investment FOCUS",
-    "thirdBlockTitle": "Building the Future Through Strategic Investments: Our Areas of Expertise",
+    "thirdBlockTitle": "Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise",
     "thirdBlockCards": [
       {
         "cardSubTitle": "Metal Processing",
         "cardTitle": "Investing in the Future of Metal Processing",
         "cardText": "We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field.",
-        "operatingBusiness": "Umega Group, a company dedicated to technological innovation and sustainable practices in the industry.",
+        "operatingBusiness": "Umega Group, an international group of companies dedicated to technological innovation and sustainable practices in the metal industry.",
         "buttonText": "Learn more",
-        "buttonLink": ""
+        "buttonLink": "#",
+        "img": "/images/card.jpg"
       },
       {
-        "cardSubTitle": "Real estate manaManagement & devedevelopment",
-        "cardTitle": "Building a Sustainable Future for Real Estate",
-        "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities.",
-        "operatingBusiness": "We are currently running two commercial real estate projects to expand our portfolio and maximize returns for our investors.",
+        "cardSubTitle": "Real estate management and developments",
+        "cardTitle": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
+        "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. Our unwavering commitment involves generating sustained value for our investors and fostering the betterment of local communities.",
+        "operatingBusiness": "We own 2 commercial properties and we are currently running two commercial real estate development projects to expand our portfolio and maximize returns.",
         "buttonText": "Learn more",
-        "buttonLink": ""
+        "buttonLink": "#",
+        "img": "/images/card2.jpg"
       }
     ],
     "fourthBlockSubTitle": "EXITS",
-    "fourthBlockTitle": "Uncovering the Best Investments Across Europe",
+    "fourthBlockTitle": "Uncovering the Best <br>Investments Across Europe",
     "fourthBlockCols": [
       {
         "title": "Pharmacy",
@@ -65,20 +70,20 @@
   },
   "about": {
     "topBlockTitle": "Our Passion for Growth and Development",
-    "topBlockDescription": "At Baltvesta, we are driven by a passion to achieve long-term growth and development through strategic investments and partnerships.",
+    "topBlockDescription": "At Baltvesta, we are driven by a passion to achieve long-term growth and <br>development through strategic investments and partnerships.",
     "secondBlockSubTItle": "Our story",
-    "secondBlockText": "Our story began with a passion for investing and a commitment to creating value for our clients. Founded in Lithuania, we have since expanded our reach to other European countries, bringing our expertise and experience to diverse markets. Our success is rooted in our disciplined investment approach, which emphasizes long-term value creation and careful risk management.",
+    "secondBlockText": "Our story began with a passion for investing and a commitment to creating value for our stakeholders. Founded in Lithuania, we have since expanded our reach to other European countries, bringing our expertise and experience to diverse markets. Our success is rooted in our disciplined investment approach, which emphasizes long-term value creation and careful risk management.",
     "thirdBlockTitle": "From Our Roots to the Present: Our Journey in Investing",
     "thirdBlockCols": [
       {
-        "year": "2005",
+        "year": "2001",
         "title": "Baltvesta founded",
-        "text": "The company was established with a vision of providing exceptional investment opportunities to clients"
+        "text": "The company was established with a vision of identifying exceptional investment opportunities; first investment made"
       },
       {
-        "year": "2007",
+        "year": "2003",
         "title": "First metal processing investment",
-        "text": "Baltvesta invested in a metal processing company, laying the foundation for its current investment focus"
+        "text": "Baltvesta took a step forward by investing in Utenos Elektrortechnika, a company specializing in metal processing. This pivotal move laid the groundwork for its current investment focus."
       },
       {
         "year": "2010",
@@ -101,16 +106,18 @@
       {
         "title": "Sector Expertise",
         "text": "With a deep understanding of the metal processing and real estate industries, we leverage our sector expertise to identify attractive investment opportunities and create value through active participation in portfolio companies."
-      },      {
+      },
+      {
         "title": "Risk Management",
-        "text": "Our approach to risk management is founded on a rigorous due diligence process, conservative financial structuring, and active monitoring of investments to identify and mitigate potential risks."
-      },      {
+        "text": "Our approach to risk management is founded on a rigorous due diligence process, appropriate financial structuring, and active monitoring of investments to identify and mitigate potential risks."
+      },
+      {
         "title": "Focus on Sustainability",
         "text": "We believe that sustainable investments are key to long-term value creation, and as such, we prioritize investments in companies that demonstrate a commitment to environmental, social, and governance (ESG) principles."
       }
     ],
     "fifthBlockSubTitle": "Investment FOCUS",
-    "fifthBlockTitle": "Building the Future Through Strategic Investments: Our Areas of Expertise",
+    "fifthBlockTitle": "Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise",
     "fifthBlocCards": [
       {
         "cardSubTitle": "Metal Processing",
@@ -118,7 +125,8 @@
         "cardText": "We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field.",
         "operatingBusiness": "",
         "buttonText": "",
-        "buttonLink": ""
+        "buttonLink": "",
+        "img": "/images/aboutcard1.jpg"
       },
       {
         "cardSubTitle": "Real estate manaManagement & devedevelopment ",
@@ -126,7 +134,8 @@
         "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities. Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities.",
         "operatingBusiness": "",
         "buttonText": "",
-        "buttonLink": ""
+        "buttonLink": "",
+        "img": "/images/aboutcard2.jpg"
       }
     ],
     "sixthBlockSubTitle": "our operating businesses",
@@ -147,22 +156,42 @@
     ],
     "sixthBlockTabsContent": [
       {
-        "title": "United by passion for crafting things that last",
-        "text": "UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D, provide processing services and build a range of proprietary products for industrial and agricultural customers.UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D, provide processing services and build a range of proprietary products for industrial and agricultural customers. UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D, provide processing services and build a range of proprietary products for industrial and agricultural customers.",
+        "title": "Investing in the Future of Metal Processing",
+        "text": "<p>International group of companies dedicated to technological innovation and sustainable practices in the metal industry. </p><p>With roots reaching as far back as 1919, the group are full scope specialists in industrial metal: from carring out R&D to providing processing services and building a range of proprietary products for industrial and agricultural customers.</p>",
         "linkText": "Discover more",
         "link": "",
         "cols": [
           {
-            "title": "3",
-            "text": "Unique metal processing companies"
+            "title": "4",
+            "text": "unique production facilities in Lithuania and Germany"
           },
           {
-            "title": "1,390",
-            "text": "Employers"
+            "title": "835",
+            "text": "employees"
           },
           {
-            "title": "12 ml. eur",
-            "text": "Annual income"
+            "title": "88 M",
+            "text": "annual income"
+          }
+        ]
+      },
+      {
+        "title": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
+        "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff wellbeeing, creative and inspiring environment.</p>",
+        "linkText": "Discover more",
+        "link": "",
+        "cols": [
+          {
+            "title": "15,000m2",
+            "text": ""
+          },
+          {
+            "title": "A++",
+            "text": "energy class"
+          },
+          {
+            "title": "Bream ",
+            "text": "outstanding Certificate"
           }
         ]
       }

@@ -29,12 +29,10 @@
                 </div>
                 <div class="md:w-5/12 w-12/12 md:mb-0 mb-12 px-3 relative">
                     <div class="title">
-                        <h1 class="mb-[23px]">{__.home.topBlockTitle}</h1>
+                        <h1 class="mb-[23px]">{@html __.home.topBlockTitle}</h1>
                     </div>
                     <div class="text">
-                        <p>Make a positive impact and achieve long-term financial success by investing in our portfolio
-                            of sustainable and socially responsible companies in the metal processing and real estate
-                            industries throughout Europe.</p>
+                        <p>{@html __.home.topBlockText}</p>
                     </div>
                 </div>
                 <div class="w-1/12 px-3"></div>
@@ -61,40 +59,22 @@
             <div class="w-12/12 lg:py-32 md:py-20 py-12">
                 <div class="sticky-container text min-h-screen my-5 textw90">
                     <div class="sticky">
-                        <span class="inline-block mb-[20px] uppercase subtitle">since 2007</span>
-                        <h3 class="content__title" data-splitting data-effect16>At Baltvesta, we are passionate about
-                            driving growth and profitability for our portfolio
-                            companies, and delivering exceptional returns for our investors. Since 2007, we have been
-                            investing in high-potential companies in the metal processing and real estate industries
-                            throughout Europe, and actively participating in their development to unlock their full
-                            potential.</h3>
+                        <span class="inline-block mb-[20px] uppercase subtitle">{@html __.home.secondBlockSubTitle}</span>
+                        <h3 class="content__title" data-splitting data-effect16>{@html __.home.secondBlockText}</h3>
                     </div>
                 </div>
-                <Button href="/about">
-                    About us
+                <Button href="{__.home.seccondBlockButtonLink}">
+                    {@html __.home.seccondBlockButtonText}
                 </Button>
                 <div class="grid md:grid-cols-3 grid-cols-1 lg:gap-20 gap-10 mt-20">
+                    {#each __.home.seccondBlockCols as col}
                     <div class="w-full">
                         <!--{pro.Icon.data.attributes.url}-->
-                        <img class="sign mb-5" src="/images/Frame.svg" alt="">
-                        <h4 class="mb-5">Industry Expertise</h4>
-                        <p>Deep industry expertise in metal processing and real estate, allowing identification of
-                            high-potential companies and maximizing their potential.</p>
+                        <img class="sign mb-5" src="{col.img}" alt="">
+                        <h4 class="mb-5">{@html col.title}</h4>
+                        <p>{@html col.text}</p>
                     </div>
-                    <div class="w-full">
-                        <!--{pro.Icon.data.attributes.url}-->
-                        <img class="sign mb-5" src="/images/Frame1.svg" alt="">
-                        <h4 class="mb-5">Strategic Partnership</h4>
-                        <p>Collaborative approach to investing, working closely with portfolio company executives to
-                            provide strategic guidance and operational support.</p>
-                    </div>
-                    <div class="w-full">
-                        <!--{pro.Icon.data.attributes.url}-->
-                        <img class="sign mb-5" src="/images/Frame2.svg" alt="">
-                        <h4 class="mb-5">Exceptional Returns</h4>
-                        <p>Dedicated to delivering exceptional returns with integrity, transparency, and a long-term
-                            investment approach.</p>
-                    </div>
+                    {/each}
                 </div>
             </div>
         </div>
@@ -102,67 +82,43 @@
     <section class="cards-block">
         <div class="container mx-auto">
             <div class="w-12/12 lg:py-32 md:py-20 py-12">
-                <span class="inline-block uppercase">Investment FOCUS</span>
+                <span class="inline-block uppercase">{@html __.home.thirdBlockSubTitle}</span>
                 <div class="md:mb-24 mb-12">
-                    <h2 class="my-5">Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise
+                    <h2 class="my-5">{@html __.home.thirdBlockTitle}
                     </h2>
                 </div>
+                {#each __.home.thirdBlockCards as card}
                 <Card
-                        label="Metal processing"
-                        title="Investing in the Future of Metal Processing"
-                        description="We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field."
+                        label="{card.cardSubTitle}"
+                        title="{card.cardTitle}"
+                        description="{card.cardText}"
                         operatingBusiness="Custom Operating Business"
                         labelForText="Operating business:"
-                        text="Umega Group, a company dedicated to technological innovation and sustainable practices in the industry."
-                        imageUrl="/images/card.jpg"
-                        buttonUrl="example.com"
-                        buttonText="Learn more"
+                        text="{card.buttonText}"
+                        imageUrl="{card.img}"
+                        buttonUrl="{card.buttonLink}"
+                        buttonText="{card.buttonText}"
                 />
-                <Card
-                        label="Real estate manaManagement & devedevelopment"
-                        title="Building a Sustainable Future for Real Estate"
-                        description="Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities."
-                        operatingBusiness="Custom Operating Business"
-                        labelForText="Operating business:"
-                        text="We are currently running two commercial real estate projects to expand our portfolio and maximize returns for our investors."
-                        imageUrl="/images/card2.jpg"
-                        buttonUrl="example.com"
-                        buttonText="Learn more"
-                />
+                {/each}
             </div>
         </div>
     </section>
     <section class="investments-block md:mb-40 mb-12 lg:pt-0 pt-12">
         <div class="container mx-auto">
             <span class="block md:text-center uppercase">
-                EXITS
+                {@html __.home.fourthBlockSubTitle}
             </span>
-            <h2 class="md:text-center my-5">Uncovering the Best
-                <br>Investments Across Europe</h2>
+            <h2 class="md:text-center my-5">{@html __.home.fourthBlockTitle}</h2>
             <div class="grid md:grid-cols-3 grid-cols-1 ld:gap-20 gap-10 md:mt-20 mt-12">
+                {#each __.home.fourthBlockCols as col}
                 <div class="w-full">
-                    <h4 class="mb-5">Pharmacy</h4>
+                    <h4 class="mb-5">{@html col.title}</h4>
                     <div class="mb-4">
-                        <p>Investing in life-saving drugs and therapies through innovative pharmaceutical companies.</p>
+                        <p>{@html col.text}</p>
                     </div>
-                    <a href="" class="simple-link">Learn more</a>
+                    <a href="" class="simple-link">{@html col.linkText}</a>
                 </div>
-                <div class="w-full">
-                    <h4 class="mb-5">Real estate</h4>
-                    <div class="mb-4">
-                        <p>Investing in sustainable and profitable commercial real estate properties for stable
-                            returns.</p>
-                    </div>
-                    <a href="" class="simple-link">Learn more</a>
-                </div>
-                <div class="w-full">
-                    <h4 class="mb-5">Financial services</h4>
-                    <div class="mb-4">
-                        <p>Investing in innovative and responsible financial services companies for evolving customer
-                            needs.</p>
-                    </div>
-                    <a href="" class="simple-link">Learn more</a>
-                </div>
+                {/each}
             </div>
         </div>
     </section>

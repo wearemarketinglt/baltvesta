@@ -2,10 +2,13 @@
     import Carousel from "$lib/components/Carousel.svelte";
     import Card from "$lib/components/Card.svelte";
 
-    import { initializePreloaderAbout } from '$lib/animations';
-    import { initializeGsapTextScrollAnimation } from '$lib/animations'
+    import __ from '$lib/strings.json';
 
-    import { onMount, tick } from 'svelte';
+    import {initializePreloaderAbout} from '$lib/animations';
+    import {initializeGsapTextScrollAnimation} from '$lib/animations'
+
+    import {onMount, tick} from 'svelte';
+
 
     let activeTab = 0; // Set the default active tab
 
@@ -14,13 +17,11 @@
     const activeTabParam = urlParams.get('activeTab');
     activeTab = parseInt(activeTabParam, 10) || 0;
 
-    onMount(async() => {
+    onMount(async () => {
         await tick(); // Wait for the component to render
 
         initializePreloaderAbout();
         initializeGsapTextScrollAnimation();
-
-
 
         const items = document.querySelectorAll('.tabs ul li');
         const indicator = document.querySelector('.tabs ul .indicator');
@@ -69,28 +70,11 @@
 
     let slides;
 
-    let template1Slides = [
-        {
-            year: '2005',
-            title: 'Baltvesta founded',
-            description: 'The company was established with a vision of providing exceptional investment opportunities to clients',
-        },
-        {
-            year: '2007',
-            title: 'First metal processing investment',
-            description: 'Baltvesta invested in a metal processing company, laying the foundation for its current investment focus',
-        },
-        {
-            year: '2010',
-            title: 'Expansion into new markets',
-            description: 'With a growing reputation for success, Baltvesta expanded its investments beyond Lithuania and into other European countries',
-        },
-        {
-            year: '2015',
-            title: 'Launch of Umega',
-            description: 'Baltvesta launched its own metal processing company, Umega, to further solidify its position in the industry',
-        },
-    ];
+    let template1Slides = __.about.thirdBlockCols.map(item => ({
+        year: item.year,
+        title: item.title,
+        description: item.text
+    }));
 
 </script>
 
@@ -106,10 +90,8 @@
                     <span></span>
                 </div>
                 <div class="relative px-3">
-                    <h1 class="text-center relative w-full">Our Passion for Growth
-                        <br>and Development</h1>
-                    <p class="text-center">At Baltvesta, we are driven by a passion to achieve long-term growth and <br>development
-                        through strategic investments and partnerships.</p>
+                    <h1 class="text-center relative w-full mb-[28px]">{@html __.about.topBlockTitle}</h1>
+                    <p class="text-center">{@html __.about.topBlockDescription}</p>
                     <div class="image relative md:mt-28 mt-20">
                         <img class="rounded-md" src="/images/about.jpg" alt="">
                         <div class="before"></div>
@@ -123,21 +105,15 @@
         <div class="container mx-auto">
             <div class="text min-h-screen sticky-container mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
                 <div class="sticky">
-                    <span class="inline-block uppercase mb-[20px] subtitle">Our story</span>
-                    <h3 class="content__title" data-splitting data-effect16>Our story began with a passion for investing and a commitment to creating value for our clients.
-                        Founded
-                        in Lithuania, we have since expanded our reach to other European countries, bringing our expertise
-                        and
-                        experience to diverse markets. Our success is rooted in our disciplined investment approach, which
-                        emphasizes long-term value creation and careful risk management.</h3>
+                    <span class="inline-block uppercase mb-[20px] subtitle">{@html __.about.secondBlockSubTItle}</span>
+                    <h3 class="content__title" data-splitting data-effect16>{@html __.about.secondBlockText}</h3>
                 </div>
             </div>
         </div>
     </section>
     <section class="carousel-section md:pt-14 pt-12 md:pb-32 pb-12 overflow-hidden">
         <div class="container mx-auto">
-            <h5 class="mb-16">From Our Roots to the Present:
-                <br>Our Journey in Investing</h5>
+            <h5 class="mb-16">{@html __.about.thirdBlockTitle}</h5>
             <Carousel slides={template1Slides}/>
         </div>
     </section>
@@ -145,39 +121,17 @@
         <div class="container mx-auto">
             <div class="flex lg:flex-row flex-col gap72">
                 <div class="lg:w-4/12 w-12/12 px-3 lg:mb-0 mb-12">
-                    <span class="inline-block mb-6 uppercase">OUR APPROACH</span>
-                    <h5>Disciplined investment approach that is rooted in our core principles of integrity,
-                        transparency, and long-term value creation.</h5>
+                    <span class="inline-block mb-6 uppercase">{@html __.about.fourthBlockSubTitle}</span>
+                    <h5>{@html __.about.fourthBlockTitle}</h5>
                 </div>
                 <div class="boxes lg:w-8/12 w-12/12 grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-6">
-                    <div class="box px-3">
-                        <img class="mb-3.5" src="/images/kringel.svg" alt="">
-                        <h6 class="mb-3.5">Disciplined Approach</h6>
-                        <p>Our disciplined approach focuses on long-term value creation by investing in fundamentally
-                            sound businesses and partnering with portfolio companies to drive growth and
-                            profitability.</p>
-                    </div>
-                    <div class="box px-3">
-                        <img class="mb-3.5" src="/images/kringel.svg" alt="">
-                        <h6 class="mb-3.5">Disciplined Approach</h6>
-                        <p>Our disciplined approach focuses on long-term value creation by investing in fundamentally
-                            sound businesses and partnering with portfolio companies to drive growth and
-                            profitability.</p>
-                    </div>
-                    <div class="box px-3">
-                        <img class="mb-3.5" src="/images/kringel.svg" alt="">
-                        <h6 class="mb-3.5">Disciplined Approach</h6>
-                        <p>Our disciplined approach focuses on long-term value creation by investing in fundamentally
-                            sound businesses and partnering with portfolio companies to drive growth and
-                            profitability.</p>
-                    </div>
-                    <div class="box px-3">
-                        <img class="mb-3.5" src="/images/kringel.svg" alt="">
-                        <h6 class="mb-3.5">Disciplined Approach</h6>
-                        <p>Our disciplined approach focuses on long-term value creation by investing in fundamentally
-                            sound businesses and partnering with portfolio companies to drive growth and
-                            profitability.</p>
-                    </div>
+                    {#each __.about.fourthBlockCols as col}
+                        <div class="box px-3">
+                            <img class="mb-3.5" src="/images/kringel.svg" alt="">
+                            <h6 class="mb-3.5">{@html col.title}</h6>
+                            <p>{@html col.text}</p>
+                        </div>
+                    {/each}
                 </div>
             </div>
         </div>
@@ -185,33 +139,23 @@
     <section class="cards-block">
         <div class="container mx-auto">
             <div class="w-12/12 md:py-32 py-12">
-                <span class="inline-block uppercase">Investment FOCUS</span>
+                <span class="inline-block uppercase">{@html __.about.fifthBlockSubTitle}</span>
                 <div class="md:mb-24 mb-12">
-                    <h2 class="my-5">Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise
-                    </h2>
+                    <h2 class="my-5">{@html __.about.fifthBlockTitle}</h2>
                 </div>
-                <Card
-                        label="Metal processing"
-                        title="Investing in the Future of Metal Processing"
-                        description="We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field."
-                        operatingBusiness="Custom Operating Business"
-                        labelForText=""
-                        text=""
-                        imageUrl="/images/aboutcard1.jpg"
-                        buttonUrl=""
-                        buttonText=""
-                />
-                <Card
-                        label="Real estate manaManagement & devedevelopment"
-                        title="Building a Sustainable Future for Real Estate"
-                        description="Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities."
-                        operatingBusiness="Custom Operating Business"
-                        labelForText=""
-                        text=""
-                        imageUrl="/images/aboutcard2.jpg"
-                        buttonUrl=""
-                        buttonText=""
-                />
+                {#each __.about.fifthBlocCards as col}
+                    <Card
+                            label="{col.cardSubTitle}"
+                            title="{col.cardTitle}"
+                            description="{col.cardText}"
+                            operatingBusiness="Custom Operating Business"
+                            labelForText=""
+                            text=""
+                            imageUrl="{col.img}"
+                            buttonUrl=""
+                            buttonText=""
+                    />
+                {/each}
             </div>
         </div>
     </section>
@@ -226,413 +170,41 @@
                     <span></span>
                 </div>
                 <div class="relative">
-                    <span class="inline-block mb-6 uppercase">our operating businesses</span>
-                    <h2>Forward Thinking
-                        <br>Businesses</h2>
+                    <span class="inline-block mb-6 uppercase">{@html __.about.sixthBlockSubTitle}</span>
+                    <h2>{@html __.about.sixthBlockTitle}</h2>
                     <div class="flex md:flex-row flex-col md:pt-28 pt-12">
                         <div class="md:w-3/12 w-12/12 tabs md:mb-0 mb-12">
                             <ul class="md:block flex md:overflow-x-visible overflow-x-scroll">
                                 <span class="indicator"></span>
-                                <li>Metal processing</li>
-                                <li>Real estate</li>
-                                <li>Pharmacy</li>
-                                <li>Financial services</li>
+                                {#each __.about.sixthBlockTabs as tab}
+                                    <li>{tab.tab}</li>
+                                {/each}
                             </ul>
                         </div>
                         <div class="w-1/12"></div>
                         <div class="md:w-8/12 w-12/12 tab-contents">
-                            <div class="content">
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion 1
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
+                            {#each __.about.sixthBlockTabsContent as content}
+                                <div class="content">
+                                    <div class="single">
+                                        <img src="/images/tabimg.svg" alt="">
+                                        <div class="title">
+                                            <h3>{content.title}</h3>
                                         </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
+                                        <div class="text">
+                                            {@html content.text}
+                                            <a href="">{content.linkText}</a>
                                         </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
+                                        <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                            {#each content.cols as col}
+                                                <div class="col">
+                                                    <h3>{col.title}</h3>
+                                                    <p>{col.text}</p>
+                                                </div>
+                                            {/each}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion 2
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion 3
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion 4
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/each}
                         </div>
                     </div>
                 </div>
@@ -704,6 +276,7 @@
         @media screen and (max-width: 767px) {
           border-left: unset;
         }
+
         .indicator {
           position: absolute;
           top: 0;
@@ -716,6 +289,7 @@
             display: none;
           }
         }
+
         li {
           padding: 8px 19px;
           color: var(--grey-color);
@@ -726,6 +300,7 @@
             width: 100%;
             white-space: nowrap;
           }
+
           &:global(.active) {
             color: var(--darkblue-color);
           }
@@ -736,29 +311,36 @@
     .tab-contents {
       .content {
         display: none;
+
         &:global(.active) {
           display: block;
         }
+
         .single {
           &:not(:last-child) {
             margin-bottom: 100px;
           }
+
           img {
             max-width: 175px;
           }
+
           .title {
             h3 {
               margin-top: 35px;
               margin-bottom: 23px;
             }
           }
+
           .text {
             margin-bottom: 50px;
           }
+
           .row {
             .col {
               max-width: 185px;
               width: 100%;
+
               h3 {
                 margin-bottom: 16px;
               }
@@ -771,20 +353,24 @@
 
   .animatetopblockabout {
     background: transparent;
+
     .lines {
       span {
         transform: scaleY(0);
         transform-origin: top;
       }
     }
+
     h1, p {
       opacity: 0;
       transform: translateY(-20px);
     }
+
     img {
       opacity: 0;
       transform: translateY(-20px);
     }
+
     .before {
       opacity: 0;
       transform: translateX(-50%) translateY(0);
