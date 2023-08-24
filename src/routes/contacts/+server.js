@@ -1,11 +1,11 @@
 import { Resend } from 'resend'
 // import { RESEND_API, EMAIL_TO } from '$env/static/private'
 
-const resend = new Resend('re_123456789')
+const resend = new Resend('re_hWD2aWHS_PBAd4g4VmioSoRPe78p8MfD1')
 
 export async function POST({ request }) {
     const formData = await request.formData();
-
+    console.log(formData)
     const name = formData.get('name');
     const surname = formData.get('surname');
     const company = formData.get('company');

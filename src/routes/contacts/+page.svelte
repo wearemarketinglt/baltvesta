@@ -83,6 +83,7 @@
                             <button>Send inquiry</button>
 
                         </form>
+                        <p bind:this={formResponse} class="text-white text-center invisible absolute top-[40%]">Thank You!</p>
                     </div>
                     <div class="w-1/12"></div>
                     <div class="md:w-5/12 w-12-12 md:block flex flex-wrap gap-12 md:mb-0 mb-12 left">
