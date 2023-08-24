@@ -94,7 +94,7 @@
                         description="{card.cardText}"
                         operatingBusiness="Custom Operating Business"
                         labelForText="Operating business:"
-                        text="{card.buttonText}"
+                        text="{card.operatingBusiness}"
                         imageUrl="{card.img}"
                         buttonUrl="{card.buttonLink}"
                         buttonText="{card.buttonText}"

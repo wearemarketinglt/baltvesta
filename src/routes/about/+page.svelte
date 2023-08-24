@@ -185,17 +185,18 @@
                         <div class="md:w-8/12 w-12/12 tab-contents">
                             {#each __.about.sixthBlockTabsContent as content}
                                 <div class="content">
+                                    {#each content.singles as single}
                                     <div class="single">
-                                        <img src="/images/tabimg.svg" alt="">
+                                        <img src="{single.img}" alt="">
                                         <div class="title">
-                                            <h3>{content.title}</h3>
+                                            <h3>{single.title}</h3>
                                         </div>
                                         <div class="text">
-                                            {@html content.text}
-                                            <a href="">{content.linkText}</a>
+                                            {@html single.text}
+                                            <a href="">{single.linkText}</a>
                                         </div>
                                         <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                            {#each content.cols as col}
+                                            {#each single.cols as col}
                                                 <div class="col">
                                                     <h3>{col.title}</h3>
                                                     <p>{col.text}</p>
@@ -203,6 +204,7 @@
                                             {/each}
                                         </div>
                                     </div>
+                                    {/each}
                                 </div>
                             {/each}
                         </div>

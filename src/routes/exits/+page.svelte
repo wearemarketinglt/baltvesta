@@ -1,3 +1,7 @@
+<script>
+    import __ from '$lib/strings.json';
+</script>
+
 <main class="page-exits">
     <section class="tabs-section">
         <div class="container mx-auto">
@@ -10,110 +14,33 @@
                     <span></span>
                 </div>
                 <div class="relative">
-                    <span class="inline-block mb-6 uppercase">Exits</span>
-                    <h1>Beyond Numbers: The Story of <br>Our Successful Investments</h1>
+                    <span class="inline-block mb-6 uppercase">{__.exits.topBlockSubTitle}</span>
+                    <h1>{@html __.exits.topBlockTitle}</h1>
                     <div class="flex md:pt-28 pt-16">
                         <div class="md:w-8/12 w-12/12 tab-contents">
                             <div class="content">
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists
-                                            in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
+                                {#each __.exits.singles as single}
+                                    <div class="single">
+                                        <img src="{single.img}" alt="">
+                                        <div class="title">
+                                            <h3>{single.title}</h3>
                                         </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
+                                        <div class="text">
+                                            {@html single.text}
+                                            <a href="{single.link}">{single.linkText}</a>
                                         </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
+                                        <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                            {#each single.cols as col}
+                                                {#if col.title || col.text}
+                                                <div class="col">
+                                                    <h3>{col.title}</h3>
+                                                    <p>{col.text}</p>
+                                                </div>
+                                                {/if}
+                                            {/each}
                                         </div>
                                     </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists
-                                            in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single">
-                                    <img src="/images/tabimg.svg" alt="">
-                                    <div class="title">
-                                        <h3>United by passion
-                                            <br>for crafting things that last</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.UMEGA GROUP are full scope specialists
-                                            in
-                                            industrial metal: we carry out R&D, provide processing services and build a
-                                            range of proprietary products for industrial and agricultural customers.</p>
-                                        <p>UMEGA GROUP are full scope specialists in industrial metal: we carry out R&D,
-                                            provide processing services and build a range of proprietary products for
-                                            industrial and agricultural customers.</p>
-                                        <a href="">Discover more</a>
-                                    </div>
-                                    <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                        <div class="col">
-                                            <h3>3</h3>
-                                            <p>Unique metal processing companies</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>1,390</h3>
-                                            <p>Employers</p>
-                                        </div>
-                                        <div class="col">
-                                            <h3>12 ml. eur</h3>
-                                            <p>Annual income</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                {/each}
                             </div>
                         </div>
                     </div>
@@ -187,6 +114,7 @@
             .col {
               max-width: 185px;
               width: 100%;
+
               h3 {
                 margin-bottom: 16px;
               }

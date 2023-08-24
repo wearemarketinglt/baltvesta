@@ -22,8 +22,8 @@
                 <div class="wrap mb-4 relative">
                     <span class="inline-block">{slide.year}</span>
                 </div>
-                <p class="bigger mb-2">{slide.title}</p>
-                <p>{slide.description}</p>
+                <p class="title bigger mb-2">{slide.title}</p>
+                <p class="desc">{slide.description}</p>
             </div>
         {/each}
     </div>
@@ -42,6 +42,8 @@
   .embla__slide {
     min-width: 386px;
     padding: 0 12px;
+    display: flex;
+    flex-direction: column;
     .wrap {
       &:before {
         content: '';
@@ -60,5 +62,10 @@
         font-weight: 500;
       }
     }
+    //.title {
+    //  flex-grow: 1;
+    //  display: flex;
+    //  align-items: flex-start;
+    //}
   }
 </style>

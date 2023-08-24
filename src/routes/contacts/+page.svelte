@@ -1,7 +1,7 @@
 <script>
-    let formResponse
-    let showResponse = false
-    let responseMessage
+    let formResponse;
+    let showResponse = false;
+    let responseMessage;
 
     const toggleResponse = () => showResponse = !showResponse
 
@@ -17,7 +17,7 @@
         }
 
         if(!formData.name || !formData.email || !formData.company) {
-            responseMessage = 'formError1';
+            responseMessage = 'Prašome užpildyti visus laukelius.';
             toggleResponse()
             return
         }
@@ -31,7 +31,7 @@
             form.style.visibility = 'hidden'
             formResponse.style.visibility = 'visible'
         } else {
-            responseMessage = 'formError2'
+            responseMessage = 'Kažkas nutiko. Pabandykite dar kartą vėliau.'
             toggleResponse()
         }
     }
@@ -45,25 +45,25 @@
                 <h1>Get in Touch with Us and <br>Discover the Opportunities</h1>
                 <div class="flex mt-[48px] mb-[64px] md:flex-row flex-col-reverse">
                     <div class="md:w-6/12 w-12/12 right">
-                        <form class="form rounded-md" on:submit|preventDefault={sendForm} method="POST">
+                        <form class="form rounded-md" method="POST" on:submit|preventDefault={sendForm}>
                             <div class="row flex lg:flex-row flex-col">
                                 <label for="name">
                                     First name
-                                    <input id="name" type="text" placeholder="Jacob">
+                                    <input id="name" name="name" type="text" placeholder="Jacob">
                                 </label>
                                 <label for="surname">
                                     Last name
-                                    <input id="surname" type="text" placeholder="Williams">
+                                    <input id="surname" name="surname" type="text" placeholder="Williams">
                                 </label>
                             </div>
                             <div class="row flex lg:flex-row flex-col">
                                 <label for="company">
                                     Company
-                                    <input id="company" type="text" placeholder="Htmlstream">
+                                    <input id="company" name="company" type="text" placeholder="Htmlstream">
                                 </label>
                                 <label for="select">
                                     Subject
-                                    <select id="select" name="">
+                                    <select id="select" name="select">
                                         <option value="" disabled selected>Choose topic</option>
                                         <option value="">Subject</option>
                                         <option value="">Subject</option>
@@ -72,11 +72,11 @@
                             </div>
                             <label for="email">
                                 Work email
-                                <input id="email" type="email" name="" placeholder="email@site.com">
+                                <input id="email" name="email" type="email" placeholder="email@site.com">
                             </label>
                             <label for="details">
                                 Details
-                                <textarea name="" id="details" cols="30" rows="10"
+                                <textarea name="details" id="details" cols="30" rows="10"
                                           placeholder="Tell us about your payment sales"></textarea>
                             </label>
 

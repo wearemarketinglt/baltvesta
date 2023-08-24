@@ -86,14 +86,44 @@
         "text": "Baltvesta took a step forward by investing in Utenos Elektrortechnika, a company specializing in metal processing. This pivotal move laid the groundwork for its current investment focus."
       },
       {
-        "year": "2010",
-        "title": "Expansion into new markets",
-        "text": "With a growing reputation for success, Baltvesta expanded its investments beyond Lithuania and into other European countries"
+        "year": "2003",
+        "title": "",
+        "text": "Investing in Sanitas, a Lithuanian pharmaceutical company, resulted in its emergence as a key player in the pharmaceutical industry within the Central and Eastern European region."
       },
       {
-        "year": "2015",
-        "title": "Launch of Umega",
-        "text": "Baltvesta launched its own metal processing company, Umega, to further solidify its position in the industry"
+        "year": "2004",
+        "title": "",
+        "text": "The merger with Umega, a trailer manufacturer, served to strengthen and consolidate its standing within the industry."
+      },
+      {
+        "year": "2003-2008",
+        "title": "",
+        "text": "Additional acquisitions were pursued, encompassing Umega Group (Lithuania) as well as Sanitas (Slovakia, Poland)."
+      },
+      {
+        "year": "2003-2008",
+        "title": "",
+        "text": "Real estate transactions in Lithuania, other Central and Eastern European counties"
+      },
+      {
+        "year": "2011",
+        "title": "Sanitas was divested",
+        "text": ""
+      },
+      {
+        "year": "2011",
+        "title": "Strategic focus - metal processing & real estate",
+        "text": "Further investments into metal processing business"
+      },
+      {
+        "year": "2011",
+        "title": "Strategic focus - metal processing & real estate",
+        "text": "The acquisition of a controlling stake in Umega Group, signaling a strategic focal point."
+      },
+      {
+        "year": "NOW",
+        "title": "Expansion into new markets",
+        "text": "Gaining prominence for its achievements, Baltvesta extended its investment ventures from Lithuania to encompass various other European nations."
       }
     ],
     "fourthBlockSubTitle": "OUR APPROACH",
@@ -146,52 +176,188 @@
       },
       {
         "tab": "Real estate"
-      },
-      {
-        "tab": "Pharmacy"
-      },
-      {
-        "tab": "Financial services"
       }
     ],
     "sixthBlockTabsContent": [
       {
-        "title": "Investing in the Future of Metal Processing",
-        "text": "<p>International group of companies dedicated to technological innovation and sustainable practices in the metal industry. </p><p>With roots reaching as far back as 1919, the group are full scope specialists in industrial metal: from carring out R&D to providing processing services and building a range of proprietary products for industrial and agricultural customers.</p>",
-        "linkText": "Discover more",
-        "link": "",
-        "cols": [
+        "singles": [
           {
-            "title": "4",
-            "text": "unique production facilities in Lithuania and Germany"
-          },
-          {
-            "title": "835",
-            "text": "employees"
-          },
-          {
-            "title": "88 M",
-            "text": "annual income"
+            "img": "/images/tabimg.svg",
+            "title": "Investing in the Future of Metal Processing",
+            "text": "<p>International group of companies dedicated to technological innovation and sustainable practices in the metal industry. </p><p>With roots reaching as far back as 1919, the group are full scope specialists in industrial metal: from carrying out R&D to providing processing services and building a range of proprietary products for industrial and agricultural customers.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": [
+              {
+                "title": "4",
+                "text": "unique production facilities in Lithuania and Germany"
+              },
+              {
+                "title": "835",
+                "text": "employees"
+              },
+              {
+                "title": "88 M",
+                "text": "annual income"
+              }
+            ]
           }
         ]
       },
       {
-        "title": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
-        "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff wellbeeing, creative and inspiring environment.</p>",
+        "singles": [
+          {
+            "img": "",
+            "title": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
+            "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff well-being, creative and inspiring environment.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": [
+              {
+                "title": "15,000m2",
+                "text": ""
+              },
+              {
+                "title": "A++",
+                "text": "energy class"
+              },
+              {
+                "title": "Bream ",
+                "text": "outstanding Certificate"
+              }
+            ]
+          },
+          {
+            "img": "",
+            "title": "Office, commercial and catering premises at Žirmūnų 68A, Vilnius",
+            "text": "",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": [
+              {
+                "title": "7,000m2",
+                "text": ""
+              },
+              {
+                "title": "3 km",
+                "text": "from the city center"
+              },
+              {
+                "title": "",
+                "text": "Recreational and amusement areas"
+              }
+            ]
+          },
+          {
+            "img": "",
+            "title": "Office and commercial premises Ukmergės str. 283B, Vilnius",
+            "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff well-being, creative and inspiring environment.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": [
+              {
+                "title": "4,400m2",
+                "text": ""
+              },
+              {
+                "title": "6 km",
+                "text": "from the city center"
+              },
+              {
+                "title": "",
+                "text": "Strategic location"
+              }
+            ]
+          },
+          {
+            "img": "",
+            "title": "Balkan Realties ",
+            "text": "<p>Commercial and residential property in development in Mladost district, Sofia, the capital of Bulgaria, one of the most modern and fast thriving areas of the city.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": [
+              {
+                "title": "",
+                "text": ""
+              },
+              {
+                "title": "",
+                "text": ""
+              },
+              {
+                "title": "",
+                "text": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "exits": {
+    "topBlockSubTitle": "EXITS",
+    "topBlockTitle": "Beyond Numbers: The Story of <br>Our Successful Investments",
+    "singles": [
+      {
+        "img": "",
+        "title": "Sanitas",
+        "text": "<p>Engaging in investments that contribute to the advancement of life-saving drugs and therapies through innovative pharmaceutical enterprises.\n</p><p>In 2003 together with business partners invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern European market.</p><p>Sold in 2011 to Valeant Pharmaceuticals International</p>",
+        "linkText": "13.1x EV/EBITDA multiple at the exit",
+        "link": "",
+        "cols": [
+          {
+            "title": "EV 365M at the exit",
+            "text": ""
+          },
+          {
+            "title": "",
+            "text": ""
+          },
+          {
+            "title": "",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "img": "",
+        "title": "Credit Plus Georgia",
+        "text": "In 2009 Baltvesta along with its partners invested in a microfinance business, whose loan portfolio was later on sold to JSC Credo Bank, Georgia in 2018.",
         "linkText": "Discover more",
         "link": "",
         "cols": [
           {
-            "title": "15,000m2",
+            "title": "",
             "text": ""
           },
           {
-            "title": "A++",
-            "text": "energy class"
+            "title": "",
+            "text": ""
           },
           {
-            "title": "Bream ",
-            "text": "outstanding Certificate"
+            "title": "",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "img": "",
+        "title": "Real estate",
+        "text": "<p>Sold property:</p> <ul><li>- Building at Maironio g., Kaunas, Lithuania. 1.3 thousand sq. m. of office premises;</li><li>- Building at Ukmergės g., Vilnius, Lithuania. 6 thousand sq. m. of office premises.</li>",
+        "linkText": "Discover more",
+        "link": "",
+        "cols": [
+          {
+            "title": "",
+            "text": ""
+          },
+          {
+            "title": "",
+            "text": ""
+          },
+          {
+            "title": "",
+            "text": ""
           }
         ]
       }
