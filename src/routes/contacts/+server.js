@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 // import { RESEND_API, EMAIL_TO } from '$env/static/private'
 
-const resend = new Resend('re_hWD2aWHS_PBAd4g4VmioSoRPe78p8MfD1')
+const resend = new Resend('re_TdVqdfwb_7q5PWQDEfBMdDdt7Ya537hkw')
 
 export async function POST({ request }) {
     const formData = await request.formData();

@@ -27,7 +27,7 @@
                                         </div>
                                         <div class="text">
                                             {@html single.text}
-                                            <a href="{single.link}">{single.linkText}</a>
+                                            <a href="{single.link}" class="simple-link">{single.linkText}</a>
                                         </div>
                                         <div class="row flex md:gap-[74px] gap-10 flex-wrap">
                                             {#each single.cols as col}

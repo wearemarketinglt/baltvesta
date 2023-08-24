@@ -73,7 +73,7 @@
     "topBlockDescription": "At Baltvesta, we are driven by a passion to achieve long-term growth and <br>development through strategic investments and partnerships.",
     "secondBlockSubTItle": "Our story",
     "secondBlockText": "Our story began with a passion for investing and a commitment to creating value for our stakeholders. Founded in Lithuania, we have since expanded our reach to other European countries, bringing our expertise and experience to diverse markets. Our success is rooted in our disciplined investment approach, which emphasizes long-term value creation and careful risk management.",
-    "thirdBlockTitle": "From Our Roots to the Present: Our Journey in Investing",
+    "thirdBlockTitle": "From Our Roots to the Present: <br>Our Journey in Investing",
     "thirdBlockCols": [
       {
         "year": "2001",
@@ -322,7 +322,7 @@
       {
         "img": "",
         "title": "Credit Plus Georgia",
-        "text": "In 2009 Baltvesta along with its partners invested in a microfinance business, whose loan portfolio was later on sold to JSC Credo Bank, Georgia in 2018.",
+        "text": "<p>In 2009 Baltvesta along with its partners invested in a microfinance business, whose loan portfolio was later on sold to JSC Credo Bank, Georgia in 2018.</p>",
         "linkText": "Discover more",
         "link": "",
         "cols": [
@@ -343,7 +343,7 @@
       {
         "img": "",
         "title": "Real estate",
-        "text": "<p>Sold property:</p> <ul><li>- Building at Maironio g., Kaunas, Lithuania. 1.3 thousand sq. m. of office premises;</li><li>- Building at Ukmergės g., Vilnius, Lithuania. 6 thousand sq. m. of office premises.</li>",
+        "text": "<ul><li>Sold property:</li><li>- Building at Maironio g., Kaunas, Lithuania. 1.3 thousand sq. m. of office premises;</li><li>- Building at Ukmergės g., Vilnius, Lithuania. 6 thousand sq. m. of office premises.</li>",
         "linkText": "Discover more",
         "link": "",
         "cols": [

@@ -28,8 +28,8 @@
         })
 
         if(res.status === 200) {
-            form.style.visibility = 'hidden'
-            formResponse.style.visibility = 'visible'
+            form.classList.add('hidden')
+            formResponse.classList.add('visible')
         } else {
             responseMessage = 'Kažkas nutiko. Pabandykite dar kartą vėliau.'
             toggleResponse()
@@ -83,7 +83,7 @@
                             <button>Send inquiry</button>
 
                         </form>
-                        <p bind:this={formResponse} class="text-white text-center invisible absolute top-[40%]">Thank You!</p>
+                        <h2 bind:this={formResponse} class="response text-white text-center absolute">Thank You!</h2>
                     </div>
                     <div class="w-1/12"></div>
                     <div class="md:w-5/12 w-12-12 md:block flex flex-wrap gap-12 md:mb-0 mb-12 left">
@@ -149,7 +149,10 @@
         flex-direction: column;
         gap: 34px;
         position: relative;
-
+        transition: all 0.5s ease-in-out;
+        &:global(.hidden) {
+          opacity: 0;
+        }
 
         .row {
           gap: 24px;
@@ -190,6 +193,16 @@
           color: var(--white-color);
           padding: 15px;
           border-radius: 10px;
+        }
+      }
+      .response {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        &:global(.visible) {
+          opacity: 1;
         }
       }
     }
