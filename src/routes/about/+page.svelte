@@ -103,7 +103,7 @@
     </section>
     <section class="text-block md:pt-20 md:pb-14 pt-12 pb-12">
         <div class="container mx-auto">
-            <div class="text min-h-screen sticky-container mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
+            <div class="text min-h-[300vh] sticky-container mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
                 <div class="sticky">
                     <span class="inline-block uppercase mb-[20px] subtitle">{@html __.about.secondBlockSubTItle}</span>
                     <h3 class="content__title" data-splitting data-effect16>{@html __.about.secondBlockText}</h3>

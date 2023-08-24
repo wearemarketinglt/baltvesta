@@ -1,3 +1,42 @@
+<script>
+    let formResponse
+    let showResponse = false
+    let responseMessage
+
+    const toggleResponse = () => showResponse = !showResponse
+
+    const sendForm = async (e) => {
+
+        const form = e.target
+        const data = new FormData(form)
+
+        const formData = {
+            name: data.get('name'),
+            email: data.get('email'),
+            company: data.get('company')
+        }
+
+        if(!formData.name || !formData.email || !formData.company) {
+            responseMessage = 'formError1';
+            toggleResponse()
+            return
+        }
+
+        const res = await fetch(form.action, {
+            method: 'POST',
+            body: data
+        })
+
+        if(res.status === 200) {
+            form.style.visibility = 'hidden'
+            formResponse.style.visibility = 'visible'
+        } else {
+            responseMessage = 'formError2'
+            toggleResponse()
+        }
+    }
+</script>
+
 <main class="page-contacts">
     <section class="contacts-section">
         <div class="container mx-auto">
@@ -6,44 +45,44 @@
                 <h1>Get in Touch with Us and <br>Discover the Opportunities</h1>
                 <div class="flex mt-[48px] mb-[64px] md:flex-row flex-col-reverse">
                     <div class="md:w-6/12 w-12/12 right">
-                        <div class="form rounded-md">
+                        <form class="form rounded-md" on:submit|preventDefault={sendForm} method="POST">
                             <div class="row flex lg:flex-row flex-col">
-                                <label for="">
+                                <label for="name">
                                     First name
-                                    <input type="text" placeholder="Jacob">
+                                    <input id="name" type="text" placeholder="Jacob">
                                 </label>
-                                <label for="">
+                                <label for="surname">
                                     Last name
-                                    <input type="text" placeholder="Williams">
+                                    <input id="surname" type="text" placeholder="Williams">
                                 </label>
                             </div>
                             <div class="row flex lg:flex-row flex-col">
-                                <label for="">
+                                <label for="company">
                                     Company
-                                    <input type="text" placeholder="Htmlstream">
+                                    <input id="company" type="text" placeholder="Htmlstream">
                                 </label>
-                                <label for="">
+                                <label for="select">
                                     Subject
-                                    <select name="">
+                                    <select id="select" name="">
                                         <option value="" disabled selected>Choose topic</option>
                                         <option value="">Subject</option>
                                         <option value="">Subject</option>
                                     </select>
                                 </label>
                             </div>
-                            <label for="">
+                            <label for="email">
                                 Work email
-                                <input type="email" name="" placeholder="email@site.com">
+                                <input id="email" type="email" name="" placeholder="email@site.com">
                             </label>
-                            <label for="">
+                            <label for="details">
                                 Details
-                                <textarea name="" id="" cols="30" rows="10"
+                                <textarea name="" id="details" cols="30" rows="10"
                                           placeholder="Tell us about your payment sales"></textarea>
                             </label>
 
                             <button>Send inquiry</button>
 
-                        </div>
+                        </form>
                     </div>
                     <div class="w-1/12"></div>
                     <div class="md:w-5/12 w-12-12 md:block flex flex-wrap gap-12 md:mb-0 mb-12 left">

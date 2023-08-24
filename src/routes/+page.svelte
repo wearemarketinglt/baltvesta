@@ -57,7 +57,7 @@
     <section class="since-block">
         <div class="container mx-auto">
             <div class="w-12/12 lg:py-32 md:py-20 py-12">
-                <div class="sticky-container text min-h-screen my-5 textw90">
+                <div class="text min-h-[300vh] sticky-container mt-5 lg:w-10/12 w-12/12 md:pr-16 pr-0">
                     <div class="sticky">
                         <span class="inline-block mb-[20px] uppercase subtitle">{@html __.home.secondBlockSubTitle}</span>
                         <h3 class="content__title" data-splitting data-effect16>{@html __.home.secondBlockText}</h3>
