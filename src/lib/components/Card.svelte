@@ -74,6 +74,12 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+    img {
+      min-height: 546px;
+      @media (max-width: 1023px) {
+        min-height: unset;
+      }
+    }
   }
 
   .left-side {
