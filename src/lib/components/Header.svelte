@@ -68,8 +68,6 @@
                         <ul class="sub-menu rounded-md">
                             <li><a class="link" href="/about?activeTab=0#forwardthinking">Metal processing</a></li>
                             <li><a class="link" href="/about?activeTab=1#forwardthinking">Real estate</a></li>
-                            <li><a class="link" href="/about?activeTab=2#forwardthinking">Pharmacy</a></li>
-                            <li><a class="link" href="/about?activeTab=3#forwardthinking">Financial services</a></li>
                         </ul>
                     </li>
                     <li>
@@ -145,6 +143,7 @@
 
     ul {
       gap: 34px;
+      margin: 0;
       li {
         position: relative;
         &:before {
