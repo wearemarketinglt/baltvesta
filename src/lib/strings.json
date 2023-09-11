@@ -32,7 +32,7 @@
         "cardText": "We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field.",
         "operatingBusiness": "Umega Group, an international group of companies dedicated to technological innovation and sustainable practices in the metal industry.",
         "buttonText": "Learn more",
-        "buttonLink": "#",
+        "buttonLink": "/about?activeTab=0#forwardthinking",
         "img": "/images/card.jpg"
       },
       {
@@ -41,7 +41,7 @@
         "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. Our unwavering commitment involves generating sustained value for our investors and fostering the betterment of local communities.",
         "operatingBusiness": "We own 2 commercial properties and we are currently running two commercial real estate development projects to expand our portfolio and maximize returns.",
         "buttonText": "Learn more",
-        "buttonLink": "#",
+        "buttonLink": "/about?activeTab=1#forwardthinking",
         "img": "/images/card2.jpg"
       }
     ],

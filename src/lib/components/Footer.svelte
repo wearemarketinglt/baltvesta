@@ -26,19 +26,21 @@
     <div class="container mx-auto">
         <div class="top md:mb-24 mb-12">
             <div class="flex md:flex-row flex-col justify-between md:items-center items-start">
-                <img class="logo" src="/images/logowhite.svg" alt="">
+                <a href="/">
+                    <img class="logo" src="/images/logowhite.svg" alt="">
+                </a>
                 <ul class="flex md:flex-row flex-col">
                     <li>
-                        <a class="link" href="">About us</a>
+                        <a class="link" href="/about">About us</a>
                     </li>
                     <li>
-                        <a class="link" href="">Investments</a>
+                        <a class="link" href="/about#forwardthinking">Investments</a>
                     </li>
                     <li>
-                        <a class="link" href="">Exits</a>
+                        <a class="link" href="/exits">Exits</a>
                     </li>
                     <li>
-                        <a class="link" href="">Contact us</a>
+                        <a class="link" href="/contacts">Contact us</a>
                     </li>
                 </ul>
             </div>
