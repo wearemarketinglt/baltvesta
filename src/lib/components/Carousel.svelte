@@ -45,13 +45,15 @@
     display: flex;
     flex-direction: column;
     .wrap {
+      display: flex;
+      flex-direction: row-reverse;
+        align-items: center;
+      justify-content: space-between;
+      gap: 15px;
       &:before {
         content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        width: 74%;
+        position: relative;
+        width: 100%;
         height: 1px;
         background: var(--blue-color);
       }
@@ -60,6 +62,7 @@
         border-radius: 23px;
         padding: 10px 18px;
         font-weight: 500;
+        flex-shrink: 0;
       }
     }
     //.title {
