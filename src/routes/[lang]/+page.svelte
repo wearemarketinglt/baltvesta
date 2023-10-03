@@ -4,6 +4,8 @@
 
     import __ from '$lib/strings.json';
 
+    import { i, languages, switchLanguage } from '@inlang/sdk-js'
+
     import {initializePreloader} from '$lib/animations';
     import {initializeGsapTextScrollAnimation} from '$lib/animations';
 
@@ -29,10 +31,10 @@
                 </div>
                 <div class="md:w-5/12 w-12/12 md:mb-0 mb-12 px-3 relative">
                     <div class="title">
-                        <h1 class="mb-[23px]">{@html __.home.topBlockTitle}</h1>
+                        <h1 class="mb-[23px]">{i('home.topBlockTitle')}</h1>
                     </div>
                     <div class="text">
-                        <p>{@html __.home.topBlockText}</p>
+                        <p>{i('home.topBlockText')}</p>
                     </div>
                 </div>
                 <div class="w-1/12 px-3"></div>
@@ -59,12 +61,12 @@
             <div class="w-12/12 lg:py-32 md:py-20 py-12">
                 <div class="text min-h-[300vh] sticky-container mt-5 mb-[20px] lg:w-10/12 w-12/12 md:pr-16 pr-0">
                     <div class="sticky">
-                        <span class="inline-block mb-[20px] uppercase subtitle">{@html __.home.secondBlockSubTitle}</span>
-                        <h3 class="content__title" data-splitting data-effect16>{@html __.home.secondBlockText}</h3>
+                        <span class="inline-block mb-[20px] uppercase subtitle">{i('home.secondBlockSubTitle')}</span>
+                        <h3 class="content__title" data-splitting data-effect16>{i('home.secondBlockText')}</h3>
                     </div>
                 </div>
-                <Button href="{__.home.seccondBlockButtonLink}">
-                    {@html __.home.seccondBlockButtonText}
+                <Button href="{i('home.seccondBlockButtonLink')}">
+                    {i('home.seccondBlockButtonText')}
                 </Button>
                 <div class="grid md:grid-cols-3 grid-cols-1 lg:gap-20 gap-10 mt-20">
                     {#each __.home.seccondBlockCols as col}
@@ -82,9 +84,9 @@
     <section class="cards-block">
         <div class="container mx-auto">
             <div class="w-12/12 lg:py-32 md:py-20 py-12">
-                <span class="inline-block uppercase">{@html __.home.thirdBlockSubTitle}</span>
+                <span class="inline-block uppercase">{@html i('home.thirdBlockSubTitle')}</span>
                 <div class="md:mb-24 mb-12">
-                    <h2 class="my-5">{@html __.home.thirdBlockTitle}
+                    <h2 class="my-5">{@html i('home.thirdBlockTitle')}
                     </h2>
                 </div>
                 {#each __.home.thirdBlockCards as card}
@@ -106,9 +108,9 @@
     <section class="investments-block md:mb-40 mb-12 lg:pt-0 pt-12">
         <div class="container mx-auto">
             <span class="block md:text-center uppercase">
-                {@html __.home.fourthBlockSubTitle}
+                { @html i('home.fourthBlockSubTitle')}
             </span>
-            <h2 class="md:text-center my-5">{@html __.home.fourthBlockTitle}</h2>
+            <h2 class="md:text-center my-5">{ @html i('home.fourthBlockTitle')}</h2>
             <div class="grid md:grid-cols-3 grid-cols-1 ld:gap-20 gap-10 md:mt-20 mt-12">
                 {#each __.home.fourthBlockCols as col}
                 <div class="w-full">

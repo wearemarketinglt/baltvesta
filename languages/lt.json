@@ -1,0 +1,393 @@
+{
+  "labas": "labas",
+  "home": {
+    "topBlockTitle": "Invest with Purpose, Invest for the Future",
+    "topBlockText": "Make a positive impact and achieve long-term financial success by investing in sustainable and socially responsible companies throughout Europe.",
+    "secondBlockSubTitle": "Since 2001",
+    "secondBlockText": "At Baltvesta, we are passionate about driving growth and profitability for our portfolio companies, and delivering exceptional returns for our investors. Since 2001, we have been investing in high-potential companies throughout Europe, and actively participating in their development to unlock their full potential.",
+    "seccondBlockButtonText": "About us",
+    "seccondBlockButtonLink": "/about",
+    "seccondBlockCols": {
+      "0": {
+        "img": "/images/Frame1.svg",
+        "title": "Industry Expertise",
+        "text": "Deep industry expertise with a current focus in metal processing and real estate, allowing identification of high-potential companies and maximizing their potential."
+      },
+      "1": {
+        "img": "/images/Frame.svg",
+        "title": "Strategic Partnership",
+        "text": "Collaborative approach to investing, working closely with portfolio companies executives to provide strategic guidance and operational support."
+      },
+      "2": {
+        "img": "/images/Frame2.svg",
+        "title": "Exceptional Returns",
+        "text": "Dedicated to delivering exceptional returns with integrity, transparency, and a long-term investment approach."
+      }
+    },
+    "thirdBlockSubTitle": "Investment FOCUS",
+    "thirdBlockTitle": "Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise",
+    "thirdBlockCards": {
+      "0": {
+        "cardSubTitle": "Metal Processing",
+        "cardTitle": "Investing in the Future of Metal Processing",
+        "cardText": "We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field.",
+        "operatingBusiness": "Umega Group, an international group of companies dedicated to technological innovation and sustainable practices in the metal industry.",
+        "buttonText": "Learn more",
+        "buttonLink": "/about?activeTab=0#forwardthinking",
+        "img": "/images/card.jpg"
+      },
+      "1": {
+        "cardSubTitle": "Real estate management and developments",
+        "cardTitle": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
+        "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. Our unwavering commitment involves generating sustained value for our investors and fostering the betterment of local communities.",
+        "operatingBusiness": "We own 2 commercial properties and we are currently running two commercial real estate development projects to expand our portfolio and maximize returns.",
+        "buttonText": "Learn more",
+        "buttonLink": "/about?activeTab=1#forwardthinking",
+        "img": "/images/card2.jpg"
+      }
+    },
+    "fourthBlockSubTitle": "EXITS",
+    "fourthBlockTitle": "Uncovering the Best <br>Investments Across Europe",
+    "fourthBlockCols": {
+      "0": {
+        "title": "Pharmacy",
+        "text": "Investing in life-saving drugs and therapies through innovative pharmaceutical companies.",
+        "linkText": "Learn more",
+        "link": ""
+      },
+      "1": {
+        "title": "Real estate",
+        "text": "Investing in sustainable and profitable commercial real estate properties for stable returns.",
+        "linkText": "Learn more",
+        "link": ""
+      },
+      "2": {
+        "title": "Financial services",
+        "text": "Investing in innovative and responsible financial services companies for evolving customer needs.",
+        "linkText": "Learn more",
+        "link": ""
+      }
+    }
+  },
+  "about": {
+    "topBlockTitle": "Our Passion for Growth <br>and Development",
+    "topBlockDescription": "At Baltvesta, we are driven by a passion to achieve long-term growth and <br>development through strategic investments and partnerships.",
+    "secondBlockSubTItle": "Our story",
+    "secondBlockText": "Our story began with a passion for investing and a commitment to creating value for our stakeholders. Founded in Lithuania, we have since expanded our reach to other European countries, bringing our expertise and experience to diverse markets. Our success is rooted in our disciplined investment approach, which emphasizes long-term value creation and careful risk management.",
+    "thirdBlockTitle": "From Our Roots to the Present: <br>Our Journey in Investing",
+    "thirdBlockCols": {
+      "0": {
+        "year": "2001",
+        "title": "Baltvesta founded",
+        "text": "The company was established with a vision of identifying exceptional investment opportunities; first investment made."
+      },
+      "1": {
+        "year": "2003",
+        "title": "First metal processing investment",
+        "text": "Baltvesta took a step forward by investing in Utenos Elektrortechnika, a company specializing in metal processing. This pivotal move laid the groundwork for its current investment focus."
+      },
+      "2": {
+        "year": "2003",
+        "title": "First investment in Pharmaceutical business",
+        "text": "Investing in Sanitas, a Lithuanian pharmaceutical company, resulted in its emergence as a key player in the pharmaceutical industry within the Central and Eastern European region."
+      },
+      "3": {
+        "year": "2004",
+        "title": "Merger for future growth",
+        "text": "The merger with Umega, a trailer manufacturer, served to strengthen and consolidate its standing within the industry."
+      },
+      "4": {
+        "year": "2003-2008",
+        "title": "Expansion of investments",
+        "text": "Additional acquisitions were pursued, encompassing Umega Group (Lithuania) as well as Sanitas (Slovakia, Poland)."
+      },
+      "5": {
+        "year": "2003-2008",
+        "title": "Growth through real estate",
+        "text": "Real estate transactions in Lithuania, other Central and Eastern European counties."
+      },
+      "6": {
+        "year": "2011",
+        "title": "Sanitas was divested",
+        "text": ""
+      },
+      "7": {
+        "year": "2011",
+        "title": "Strategic focus - metal processing & real estate",
+        "text": "Further investments into metal processing business."
+      },
+      "8": {
+        "year": "2011",
+        "title": "Strategic focus - metal processing & real estate",
+        "text": "The acquisition of a controlling stake in Umega Group, signaling a strategic focal point."
+      },
+      "9": {
+        "year": "NOW",
+        "title": "Expansion into new markets",
+        "text": "Gaining prominence for its achievements, Baltvesta extended its investment ventures from Lithuania to encompass various other European nations."
+      }
+    },
+    "fourthBlockSubTitle": "OUR APPROACH",
+    "fourthBlockTitle": "Disciplined investment approach that is rooted in our core principles of integrity, transparency, and long-term value creation.",
+    "fourthBlockCols": {
+      "0": {
+        "title": "Disciplined Approach",
+        "text": "Our disciplined approach focuses on long-term value creation by investing in fundamentally sound businesses and partnering with portfolio companies to drive growth and profitability."
+      },
+      "1": {
+        "title": "Sector Expertise",
+        "text": "With a deep understanding of the metal processing and real estate industries, we leverage our sector expertise to identify attractive investment opportunities and create value through active participation in portfolio companies."
+      },
+      "2": {
+        "title": "Risk Management",
+        "text": "Our approach to risk management is founded on a rigorous due diligence process, appropriate financial structuring, and active monitoring of investments to identify and mitigate potential risks."
+      },
+      "3": {
+        "title": "Focus on Sustainability",
+        "text": "We believe that sustainable investments are key to long-term value creation, and as such, we prioritize investments in companies that demonstrate a commitment to environmental, social, and governance (ESG) principles."
+      }
+    },
+    "fifthBlockSubTitle": "Investment FOCUS",
+    "fifthBlockTitle": "Building the Future Through <br>Strategic Investments: Our <br>Areas of Expertise",
+    "fifthBlocCards": {
+      "0": {
+        "cardSubTitle": "Metal Processing",
+        "cardTitle": "Investing in the Future of Metal Processing",
+        "cardText": "We believe in the importance of technological innovation and sustainable practices in the metal processing industry. Our investments aim to support companies that share these values and strive to achieve excellence in their field.",
+        "operatingBusiness": "",
+        "buttonText": "",
+        "buttonLink": "",
+        "img": "/images/aboutcard1.jpg"
+      },
+      "1": {
+        "cardSubTitle": "Real estate manaManagement & devedevelopment ",
+        "cardTitle": "Building a Sustainable Future for Real Estate",
+        "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. We are committed to creating long-term value for our investors, while contributing to the well-being of local communities.",
+        "operatingBusiness": "",
+        "buttonText": "",
+        "buttonLink": "",
+        "img": "/images/aboutcard2.jpg"
+      }
+    },
+    "sixthBlockSubTitle": "our operating businesses",
+    "sixthBlockTitle": "Forward Thinking Businesses",
+    "sixthBlockTabs": {
+      "0": {
+        "tab": "Metal processing"
+      },
+      "1": {
+        "tab": "Real estate"
+      }
+    },
+    "sixthBlockTabsContent": {
+      "0": {
+        "singles": {
+          "0": {
+            "img": "/images/tabimg.svg",
+            "title": "Investing in the Future of Metal Processing",
+            "text": "<p>International group of companies dedicated to technological innovation and sustainable practices in the metal industry. </p><p>With roots reaching as far back as 1919, the group are full scope specialists in industrial metal: from carrying out R&D to providing processing services and building a range of proprietary products for industrial and agricultural customers.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": {
+              "0": {
+                "title": "4",
+                "text": "unique production facilities in Lithuania and Germany"
+              },
+              "1": {
+                "title": "835",
+                "text": "employees"
+              },
+              "2": {
+                "title": "88 M",
+                "text": "annual income"
+              }
+            }
+          }
+        }
+      },
+      "1": {
+        "singles": {
+          "0": {
+            "img": "",
+            "title": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
+            "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff well-being, creative and inspiring environment.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": {
+              "0": {
+                "title": "15,000m2",
+                "text": ""
+              },
+              "1": {
+                "title": "A++",
+                "text": "energy class"
+              },
+              "2": {
+                "title": "Bream ",
+                "text": "outstanding Certificate"
+              }
+            }
+          },
+          "1": {
+            "img": "",
+            "title": "Office, commercial and catering premises at Žirmūnų 68A, Vilnius",
+            "text": "",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": {
+              "0": {
+                "title": "7,000m2",
+                "text": ""
+              },
+              "1": {
+                "title": "3 km",
+                "text": "from the city center"
+              },
+              "2": {
+                "title": "",
+                "text": "Recreational and amusement areas"
+              }
+            }
+          },
+          "2": {
+            "img": "",
+            "title": "Office and commercial premises Ukmergės str. 283B, Vilnius",
+            "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff well-being, creative and inspiring environment.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": {
+              "0": {
+                "title": "4,400m2",
+                "text": ""
+              },
+              "1": {
+                "title": "6 km",
+                "text": "from the city center"
+              },
+              "2": {
+                "title": "",
+                "text": "Strategic location"
+              }
+            }
+          },
+          "3": {
+            "img": "",
+            "title": "Balkan Realties ",
+            "text": "<p>Commercial and residential property in development in Mladost district, Sofia, the capital of Bulgaria, one of the most modern and fast thriving areas of the city.</p>",
+            "linkText": "Discover more",
+            "link": "",
+            "cols": {
+              "0": {
+                "title": "",
+                "text": ""
+              },
+              "1": {
+                "title": "",
+                "text": ""
+              },
+              "2": {
+                "title": "",
+                "text": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "exits": {
+    "topBlockSubTitle": "EXITS",
+    "topBlockTitle": "Beyond Numbers: The Story of <br>Our Successful Investments",
+    "singles": {
+      "0": {
+        "img": "",
+        "title": "Sanitas",
+        "text": "<p>Engaging in investments that contribute to the advancement of life-saving drugs and therapies through innovative pharmaceutical enterprises.\n</p><p>In 2003 together with business partners invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern European market.</p><p>Sold in 2011 to Valeant Pharmaceuticals International</p>",
+        "linkText": "13.1x EV/EBITDA multiple at the exit",
+        "link": "",
+        "cols": {
+          "0": {
+            "title": "EV 365M at the exit",
+            "text": ""
+          },
+          "1": {
+            "title": "",
+            "text": ""
+          },
+          "2": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "1": {
+        "img": "",
+        "title": "Credit Plus Georgia",
+        "text": "<p>In 2009 Baltvesta along with its partners invested in a microfinance business, whose loan portfolio was later on sold to JSC Credo Bank, Georgia in 2018.</p>",
+        "linkText": "Discover more",
+        "link": "",
+        "cols": {
+          "0": {
+            "title": "",
+            "text": ""
+          },
+          "1": {
+            "title": "",
+            "text": ""
+          },
+          "2": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "2": {
+        "img": "",
+        "title": "Real estate",
+        "text": "<ul><li>Sold property:</li><li>- Building at Maironio g., Kaunas, Lithuania. 1.3 thousand sq. m. of office premises;</li><li>- Building at Ukmergės g., Vilnius, Lithuania. 6 thousand sq. m. of office premises.</li>",
+        "linkText": "Discover more",
+        "link": "",
+        "cols": {
+          "0": {
+            "title": "",
+            "text": ""
+          },
+          "1": {
+            "title": "",
+            "text": ""
+          },
+          "2": {
+            "title": "",
+            "text": ""
+          }
+        }
+      }
+    }
+  },
+  "contacts": {
+    "subTitle": "Contact us",
+    "title": "Get in Touch with Us and Discover the Opportunities",
+    "contactsCols": {
+      "0": {
+        "title": "Contact us by phone or location",
+        "address": "Konstitucijos av. 7, LT-09308 Vilnius",
+        "addressLink": "https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI",
+        "phone": "+370 5 203 22 22",
+        "email": "office@baltvesta.lt"
+      },
+      "1": {
+        "title": "Interested in renting",
+        "address": "Konstitucijos av. 7, LT-09308 Vilnius",
+        "addressLink": "https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI",
+        "phone": "+370 5 203 22 22",
+        "email": "office@baltvesta.lt"
+      }
+    }
+  },
+  "cta": {
+    "title": "Experience the Power of Strategic Investing",
+    "text": "Contact us today to learn more about how we can help you maximize your investment potential.",
+    "buttonText": "Get in touch",
+    "buttonLink": "/contacts"
+  }
+}

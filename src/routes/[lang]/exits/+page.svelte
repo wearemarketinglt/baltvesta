@@ -1,5 +1,6 @@
 <script>
     import __ from '$lib/strings.json';
+    import { i, languages, switchLanguage } from '@inlang/sdk-js'
 </script>
 
 <main class="page-exits">
@@ -14,8 +15,8 @@
                     <span></span>
                 </div>
                 <div class="relative">
-                    <span class="inline-block mb-6 uppercase">{__.exits.topBlockSubTitle}</span>
-                    <h1>{@html __.exits.topBlockTitle}</h1>
+                    <span class="inline-block mb-6 uppercase">{i('exits.topBlockSubTitle')}</span>
+                    <h1>{@html i('exits.topBlockTitle')}</h1>
                     <div class="flex md:pt-28 pt-16">
                         <div class="md:w-8/12 w-12/12 tab-contents">
                             <div class="content">
