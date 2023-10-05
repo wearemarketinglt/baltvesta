@@ -13,7 +13,7 @@
                 </div>
                 <div class="w-2/12"></div>
                 <div class="md:w-3/12 w-12/12 md:mt-0 mt-12 flex md:justify-center md:items-center items-start">
-                    <Button href="/contacts">
+                    <Button href="/en/contacts">
                         Get in touch
                     </Button>
                 </div>
@@ -26,21 +26,21 @@
     <div class="container mx-auto">
         <div class="top md:mb-24 mb-12">
             <div class="flex md:flex-row flex-col justify-between md:items-center items-start">
-                <a href="/">
+                <a href="/en">
                     <img class="logo" src="/images/logowhite.svg" alt="">
                 </a>
                 <ul class="flex md:flex-row flex-col">
                     <li>
-                        <a class="link" href="/about">About us</a>
+                        <a class="link" href="/en/about">About us</a>
                     </li>
                     <li>
-                        <a class="link" href="/about#forwardthinking">Investments</a>
+                        <a class="link" href="/en/about#forwardthinking">Investments</a>
                     </li>
                     <li>
-                        <a class="link" href="/exits">Exits</a>
+                        <a class="link" href="/en/exits">Success stories</a>
                     </li>
                     <li>
-                        <a class="link" href="/contacts">Contact us</a>
+                        <a class="link" href="/en/contacts">Contact us</a>
                     </li>
                 </ul>
             </div>

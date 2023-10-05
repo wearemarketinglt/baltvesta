@@ -7,7 +7,7 @@
     import {initializePreloaderAbout} from '$lib/animations';
     import {initializeGsapTextScrollAnimation} from '$lib/animations'
 
-    import { i, languages, switchLanguage } from '@inlang/sdk-js'
+    import {i, languages, switchLanguage} from '@inlang/sdk-js'
 
     import {onMount, tick} from 'svelte';
 
@@ -72,11 +72,53 @@
 
     let slides;
 
-    let template1Slides = __.about.thirdBlockCols.map(item => ({
-        year: item.year,
-        title: item.title,
-        description: item.text
-    }));
+    let template1Slides = [
+        {
+            year: i('about.thirdBlockCols.0.year'),
+            title: i('about.thirdBlockCols.0.title'),
+            description: i('about.thirdBlockCols.0.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.1.year'),
+            title: i('about.thirdBlockCols.1.title'),
+            description: i('about.thirdBlockCols.1.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.2.year'),
+            title: i('about.thirdBlockCols.2.title'),
+            description: i('about.thirdBlockCols.2.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.3.year'),
+            title: i('about.thirdBlockCols.3.title'),
+            description: i('about.thirdBlockCols.3.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.4.year'),
+            title: i('about.thirdBlockCols.4.title'),
+            description: i('about.thirdBlockCols.4.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.5.year'),
+            title: i('about.thirdBlockCols.5.title'),
+            description: i('about.thirdBlockCols.5.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.6.year'),
+            title: i('about.thirdBlockCols.6.title'),
+            description: i('about.thirdBlockCols.6.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.7.year'),
+            title: i('about.thirdBlockCols.7.title'),
+            description: i('about.thirdBlockCols.7.text'),
+        },
+        {
+            year: i('about.thirdBlockCols.8.year'),
+            title: i('about.thirdBlockCols.8.title'),
+            description: i('about.thirdBlockCols.8.text'),
+        },
+    ]
 
 </script>
 
@@ -93,7 +135,7 @@
                 </div>
                 <div class="relative px-3">
                     <h1 class="text-center relative w-full mb-[28px]">{@html i('about.topBlockTitle')}</h1>
-                    <p class="text-center">{@html i ('about.topBlockDescription')}</p>
+                    <p class="text-center">{@html i('about.topBlockDescription')}</p>
                     <div class="image relative md:mt-28 mt-20">
                         <img class="rounded-md" src="/images/about.jpg" alt="">
                         <div class="before"></div>
@@ -188,24 +230,24 @@
                             {#each __.about.sixthBlockTabsContent as content}
                                 <div class="content">
                                     {#each content.singles as single}
-                                    <div class="single">
-                                        <img src="{single.img}" alt="">
-                                        <div class="title">
-                                            <h3>{single.title}</h3>
+                                        <div class="single">
+                                            <img src="{single.img}" alt="">
+                                            <div class="title">
+                                                <h3>{single.title}</h3>
+                                            </div>
+                                            <div class="text">
+                                                {@html single.text}
+                                                <a href="{single.link}" class="simple-link">{single.linkText}</a>
+                                            </div>
+                                            <div class="row flex md:gap-[74px] gap-10 flex-wrap">
+                                                {#each single.cols as col}
+                                                    <div class="col">
+                                                        <h3>{col.title}</h3>
+                                                        <p>{col.text}</p>
+                                                    </div>
+                                                {/each}
+                                            </div>
                                         </div>
-                                        <div class="text">
-                                            {@html single.text}
-                                            <a href="" class="simple-link">{single.linkText}</a>
-                                        </div>
-                                        <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                            {#each single.cols as col}
-                                                <div class="col">
-                                                    <h3>{col.title}</h3>
-                                                    <p>{col.text}</p>
-                                                </div>
-                                            {/each}
-                                        </div>
-                                    </div>
                                     {/each}
                                 </div>
                             {/each}

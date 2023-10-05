@@ -112,15 +112,36 @@
             </span>
             <h2 class="md:text-center my-5">{ @html i('home.fourthBlockTitle')}</h2>
             <div class="grid md:grid-cols-3 grid-cols-1 ld:gap-20 gap-10 md:mt-20 mt-12">
-                {#each __.home.fourthBlockCols as col}
+                <!--{#each __.home.fourthBlockCols as col}-->
+                <!--<div class="w-full">-->
+                <!--    <h4 class="mb-5">{@html col.title}</h4>-->
+                <!--    <div class="mb-4">-->
+                <!--        <p>{@html col.text}</p>-->
+                <!--    </div>-->
+                <!--    <a href="" class="simple-link">{@html col.linkText}</a>-->
+                <!--</div>-->
+                <!--{/each}-->
                 <div class="w-full">
-                    <h4 class="mb-5">{@html col.title}</h4>
+                    <h4 class="mb-5">{@html i('home.fourthBlockCols.0.title')}</h4>
                     <div class="mb-4">
-                        <p>{@html col.text}</p>
+                        <p>{@html i('home.fourthBlockCols.0.text')}</p>
                     </div>
-                    <a href="" class="simple-link">{@html col.linkText}</a>
+                    <a href="{i('home.fourthBlockCols.0.link')}" class="simple-link">{@html i('home.fourthBlockCols.0.linkText')}</a>
                 </div>
-                {/each}
+                <div class="w-full">
+                    <h4 class="mb-5">{@html i('home.fourthBlockCols.1.title')}</h4>
+                    <div class="mb-4">
+                        <p>{@html i('home.fourthBlockCols.1.text')}</p>
+                    </div>
+                    <a href="{i('home.fourthBlockCols.1.link')}" class="simple-link">{@html i('home.fourthBlockCols.1.linkText')}</a>
+                </div>
+                <div class="w-full">
+                    <h4 class="mb-5">{@html i('home.fourthBlockCols.2.title')}</h4>
+                    <div class="mb-4">
+                        <p>{@html i('home.fourthBlockCols.2.text')}</p>
+                    </div>
+                    <a href="{i('home.fourthBlockCols.2.link')}" class="simple-link">{@html i('home.fourthBlockCols.2.linkText')}</a>
+                </div>
             </div>
         </div>
     </section>

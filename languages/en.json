@@ -6,7 +6,7 @@
     "secondBlockSubTitle": "Since 2001",
     "secondBlockText": "At Baltvesta, we are passionate about driving growth and profitability for our portfolio companies, and delivering exceptional returns for our investors. Since 2001, we have been investing in high-potential companies throughout Europe, and actively participating in their development to unlock their full potential.",
     "seccondBlockButtonText": "About us",
-    "seccondBlockButtonLink": "/about",
+    "seccondBlockButtonLink": "/en/about",
     "seccondBlockCols": {
       "0": {
         "img": "/images/Frame1.svg",
@@ -46,26 +46,26 @@
         "img": "/images/card2.jpg"
       }
     },
-    "fourthBlockSubTitle": "EXITS",
-    "fourthBlockTitle": "Uncovering the Best <br>Investments Across Europe",
+    "fourthBlockSubTitle": "Success stories",
+    "fourthBlockTitle": "Looking Back at Our Successful Investments: <br>The Story Behind the Numbers",
     "fourthBlockCols": {
       "0": {
         "title": "Pharmacy",
         "text": "Investing in life-saving drugs and therapies through innovative pharmaceutical companies.",
         "linkText": "Learn more",
-        "link": ""
+        "link": "/en/exits"
       },
       "1": {
         "title": "Real estate",
         "text": "Investing in sustainable and profitable commercial real estate properties for stable returns.",
         "linkText": "Learn more",
-        "link": ""
+        "link": "/en/exits"
       },
       "2": {
         "title": "Financial services",
         "text": "Investing in innovative and responsible financial services companies for evolving customer needs.",
         "linkText": "Learn more",
-        "link": ""
+        "link": "/en/exits"
       }
     }
   },
@@ -83,45 +83,40 @@
       },
       "1": {
         "year": "2003",
-        "title": "First metal processing investment",
-        "text": "Baltvesta took a step forward by investing in Utenos Elektrortechnika, a company specializing in metal processing. This pivotal move laid the groundwork for its current investment focus."
+        "title": "First investment",
+        "text": "Baltvesta embarks on its journey with its initial investment in the promising pharmaceutical company Sanitas."
       },
       "2": {
         "year": "2003",
-        "title": "First investment in Pharmaceutical business",
-        "text": "Investing in Sanitas, a Lithuanian pharmaceutical company, resulted in its emergence as a key player in the pharmaceutical industry within the Central and Eastern European region."
+        "title": "First metal processing investments",
+        "text": "Baltvesta advanced its position by venturing into Utenos Elektrotechnika, a company renowned for its expertise in metal processing. This significant step marked the foundation of its present investment strategy. Further bolstering its commitment to the metal processing sector, Baltvesta extended its investments to include the Umega group."
       },
       "3": {
-        "year": "2004",
-        "title": "Merger for future growth",
-        "text": "The merger with Umega, a trailer manufacturer, served to strengthen and consolidate its standing within the industry."
-      },
-      "4": {
         "year": "2003-2008",
         "title": "Expansion of investments",
         "text": "Additional acquisitions were pursued, encompassing Umega Group (Lithuania) as well as Sanitas (Slovakia, Poland)."
       },
-      "5": {
+      "4": {
         "year": "2003-2008",
         "title": "Growth through real estate",
-        "text": "Real estate transactions in Lithuania, other Central and Eastern European counties."
+        "text": "Ongoing real estate transactions took place in Lithuania, Bulgaria (2006), and Georgia (2007)."
+      },
+      "5": {
+        "year": "2009",
+        "title": "Investments into finance sector",
+        "text": "Venturing into a microfinance enterprise in Georgia broadens both the investment portfolio and geographic reach."
       },
       "6": {
         "year": "2011",
         "title": "Sanitas was divested",
-        "text": ""
+        "text": "It was the largest transaction in the Baltics in 2011."
       },
       "7": {
         "year": "2011",
-        "title": "Strategic focus - metal processing & real estate",
-        "text": "Further investments into metal processing business."
+        "title": "Strategic focus – metal processing & real estate",
+        "text": "Baltvesta remains committed to its investments in the metal processing industry, with the acquisition of a controlling interest in Umega Group signaling a strategic priority."
       },
       "8": {
-        "year": "2011",
-        "title": "Strategic focus - metal processing & real estate",
-        "text": "The acquisition of a controlling stake in Umega Group, signaling a strategic focal point."
-      },
-      "9": {
         "year": "NOW",
         "title": "Expansion into new markets",
         "text": "Gaining prominence for its achievements, Baltvesta extended its investment ventures from Lithuania to encompass various other European nations."
@@ -296,8 +291,8 @@
     }
   },
   "exits": {
-    "topBlockSubTitle": "EXITS",
-    "topBlockTitle": "Beyond Numbers: The Story of <br>Our Successful Investments",
+    "topBlockSubTitle": "Success stories",
+    "topBlockTitle": "Looking Back at Our Successful Investments: The Story Behind the Numbers",
     "singles": {
       "0": {
         "img": "",

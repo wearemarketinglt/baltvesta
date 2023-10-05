@@ -1,7 +1,5 @@
 <script>
 
-    import { i, languages, switchLanguage } from '@inlang/sdk-js'
-
     let formResponse;
     let showResponse = false;
     let responseMessage;
