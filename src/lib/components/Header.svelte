@@ -144,6 +144,7 @@
     ul {
       gap: 34px;
       margin: 0;
+      list-style: none;
       li {
         position: relative;
         &:before {

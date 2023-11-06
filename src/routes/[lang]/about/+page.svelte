@@ -19,6 +19,7 @@
     const activeTabParam = urlParams.get('activeTab');
     activeTab = parseInt(activeTabParam, 10) || 0;
 
+
     onMount(async () => {
         await tick(); // Wait for the component to render
 
@@ -54,7 +55,7 @@
             // Check if the activeTabParam is present in the URL
             const forwardThinkingSection = document.getElementById('forwardthinking');
             if (forwardThinkingSection && activeTabParam !== null) {
-                forwardThinkingSection.style.scrollMarginTop = '100px'; // Adjust the value as needed
+                forwardThinkingSection.style.scrollMarginTop = '0px'; // Adjust the value as needed
                 forwardThinkingSection.focus();
             }
         }
@@ -65,8 +66,24 @@
             });
         });
 
-        window.addEventListener('sveltekit:route-change', () => {
-            // Your code for handling route changes here
+        const parents = document.querySelectorAll('.rowofcols');
+
+        parents.forEach(parent => {
+            const childCount = parent.querySelectorAll('.col').length;
+
+            if (childCount === 2) {
+                parent.classList.add('two-children-style');
+            } else if (childCount === 3) {
+                parent.classList.add('three-children-style');
+            }
+        });
+
+
+        const menuItems = document.querySelectorAll('.sub-menu li a');
+        menuItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                items[i].click();
+            });
         });
     });
 
@@ -220,8 +237,8 @@
                         <div class="md:w-3/12 w-12/12 tabs md:mb-0 mb-12">
                             <ul class="md:block flex md:overflow-x-visible overflow-x-scroll">
                                 <span class="indicator"></span>
-                                {#each __.about.sixthBlockTabs as tab}
-                                    <li>{tab.tab}</li>
+                                {#each __.about.sixthBlockTabs as tab, i}
+                                    <li id="tab{i}">{tab.tab}</li>
                                 {/each}
                             </ul>
                         </div>
@@ -232,21 +249,28 @@
                                     {#each content.singles as single}
                                         <div class="single">
                                             <img src="{single.img}" alt="">
+                                            {#if single.sub}
+                                            <div class="subhead mt-[10px]">
+                                                <p>{single.sub}</p>
+                                            </div>
+                                            {/if}
                                             <div class="title">
-                                                <h3>{single.title}</h3>
+                                                <h3 clas="mt-[10px]">{single.title}</h3>
                                             </div>
                                             <div class="text">
                                                 {@html single.text}
                                                 <a href="{single.link}" class="simple-link">{single.linkText}</a>
                                             </div>
-                                            <div class="row flex md:gap-[74px] gap-10 flex-wrap">
-                                                {#each single.cols as col}
-                                                    <div class="col">
-                                                        <h3>{col.title}</h3>
-                                                        <p>{col.text}</p>
-                                                    </div>
-                                                {/each}
-                                            </div>
+                                            {#if single.cols}
+                                                <div class="row rowofcols flex md:gap-[74px] gap-10 flex-wrap">
+                                                    {#each single.cols as col}
+                                                        <div class="col">
+                                                            <h3>{col.title}</h3>
+                                                            <p>{col.text}</p>
+                                                        </div>
+                                                    {/each}
+                                                </div>
+                                            {/if}
                                         </div>
                                     {/each}
                                 </div>
@@ -369,23 +393,35 @@
 
           img {
             max-width: 175px;
+            margin-bottom: 40px;
           }
 
           .title {
             h3 {
-              margin-top: 35px;
+              margin-top: 5px;
               margin-bottom: 23px;
             }
           }
 
           .text {
             margin-bottom: 50px;
+
+            ul:global {
+              list-style: initial;
+            }
           }
 
           .row {
+            //&:global(.two-children-style .col) {
+            //  max-width: 300px;
+            //}
             .col {
-              max-width: 185px;
               width: 100%;
+              flex: 1;
+              @media screen and (max-width: 500px) {
+                flex: unset;
+
+              }
 
               h3 {
                 margin-bottom: 16px;
