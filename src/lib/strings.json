@@ -238,6 +238,7 @@
           },
           {
             "img": "",
+            "sub": "For rent",
             "title": "Office, commercial and catering premises at Žirmūnų 68A, Vilnius",
             "text": "<p>Siryjo lines is one of the companies of the Baltvesta group, managing more than 7 thousand sq.m. building in Žirmūnai, Vilnius, which has commercial premises for trade as well as catering services and business center Sirijus, which is a modern office premise. Our clients are divided in 3 areas:</p> <ul><li>Leisure and entertainment area: sports club People fitness, bowling club Žirmūnai bowling, billiards club Poolhouse, pizzeria Pizza Max, restaurant with Lithuanian dishes Laimas tavern, stuffed fried potatoes restaurant Ajomama.</li><li>Commercial premises: manufacturer of sprouted buckwheat bars Tundra snack, automatic laundry Londris, paint studio Himeja and heating, ventilation, air conditioning systems IDV Group.</li><li>Office premises: software manufacturer Matrix Software Baltic, logistics companies Alpha LT and Olersa, construction company Specto, design services company Urbanistikos formatas, structural design company IT ranga, board and biofuel seller Medinis namas LT, accounting company Finamber, footwear shop 3 KRM Baltic.</li></ul>",
             "linkText": "",
@@ -255,6 +256,7 @@
           },
           {
             "img": "",
+            "sub": "For rent",
             "title": "Office and commercial premises Ukmergės str. 283B, Vilnius",
             "text": "<p>Fabijoniškės is a residential area located in the north of the city, a district that is dominated by public buildings. It is a well-developed area with further commercial and residential development. The object is located between Ukmergė and Salomėja Neris streets, which are perfectly visible and accessible from both sides.</p><p>Ukmergės Street is one of the busiest streets in the capital, where A2 highway (Panevėžys – Riga) begins. It is one of the longest streets in the city, an important district connector leading to the city center and at the same time is the northern gate of the city. Average daily traffic intensity on Ukmergė Street fluctuates around 50 thousand vehicles.</p> <ul><li>1,840 m2 administrative</li><li>809 m2 commercial area</li><li>298 m2 clinic (medical)</li></ul>",
             "linkText": "",
@@ -327,7 +329,7 @@
       {
         "img": "",
         "title": "Real estate",
-        "text": "<ul><li>Sold property:</li><li>- Office building of 1,300 m2 at Maironio str., Kaunas, Lithuania;</li><li>- Office and commercial building of 6,000m2 at Ukmergės str., Vilnius, Lithuania.</li>",
+        "text": "<p>Sold property:</p><p>- Office building of 1,300 m2 at Maironio str., Kaunas, Lithuania;</p><p>- Office and commercial building of 6,000m2 at Ukmergės str., Vilnius, Lithuania.</p>",
         "linkText": "",
         "link": "",
         "cols": [
