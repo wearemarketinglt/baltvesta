@@ -42,6 +42,9 @@
                     <li>
                         <a class="link" href="/en/contacts">Contact us</a>
                     </li>
+                    <li>
+                        <a class="link" href="/en/privacy">Privacy policy</a>
+                    </li>
                 </ul>
             </div>
         </div>

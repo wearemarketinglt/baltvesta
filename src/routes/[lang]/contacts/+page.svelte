@@ -39,6 +39,7 @@
 </script>
 
 <svelte:head>
+    <title>Contact us</title>
     <meta name="description" content="Get in touch with us now and discover various international opportunities!"/>
 </svelte:head>
 

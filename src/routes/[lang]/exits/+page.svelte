@@ -4,6 +4,7 @@
 </script>
 
 <svelte:head>
+    <title>Success stories</title>
     <meta name="description" content="Looking Back at Our Successful Investments: The Story Behind the Numbers. See it yourself."/>
 </svelte:head>
 

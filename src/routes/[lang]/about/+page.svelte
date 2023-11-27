@@ -140,6 +140,7 @@
 </script>
 
 <svelte:head>
+    <title>Learn about us</title>
     <meta name="description" content="At Baltvesta, we are driven by a passion to achieve long-term growth and development through strategic investments and partnerships."/>
 </svelte:head>
 

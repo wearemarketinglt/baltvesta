@@ -18,6 +18,11 @@
 
 </script>
 
+<svelte:head>
+    <title>Baltvesta home page</title>
+    <meta name="description" content="Make a positive impact and achieve long-term financial success by investing in sustainable and socially responsible companies."/>
+</svelte:head>
+
 <main class="home-page">
     <section class="top-block animatetopblock">
         <div class="container mx-auto">
