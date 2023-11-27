@@ -3,6 +3,10 @@
     import { i, languages, switchLanguage } from '@inlang/sdk-js'
 </script>
 
+<svelte:head>
+    <meta name="description" content="Looking Back at Our Successful Investments: The Story Behind the Numbers. See it yourself."/>
+</svelte:head>
+
 <main class="page-exits">
     <section class="tabs-section">
         <div class="container mx-auto">

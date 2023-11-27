@@ -38,6 +38,10 @@
     }
 </script>
 
+<svelte:head>
+    <meta name="description" content="Get in touch with us now and discover various international opportunities!"/>
+</svelte:head>
+
 <main class="page-contacts">
     <section class="contacts-section">
         <div class="container mx-auto">

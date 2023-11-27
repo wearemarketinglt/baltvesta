@@ -4,6 +4,8 @@
 
     import Header from '$lib/components/Header.svelte';
     import Footer from '$lib/components/Footer.svelte';
+    import Cookie from '$lib/components/Cookie.svelte';
+
 
 </script>
 
@@ -11,6 +13,9 @@
     />
 
 <slot />
+
+<Cookie
+    />
 
 <Footer
     />

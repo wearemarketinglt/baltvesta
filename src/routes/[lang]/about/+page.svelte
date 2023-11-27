@@ -139,6 +139,10 @@
 
 </script>
 
+<svelte:head>
+    <meta name="description" content="At Baltvesta, we are driven by a passion to achieve long-term growth and development through strategic investments and partnerships."/>
+</svelte:head>
+
 <main class="page-about">
     <section class="top-block md:pb-0 pb-12 animatetopblockabout">
         <div class="container mx-auto">
@@ -250,9 +254,9 @@
                                         <div class="single">
                                             <img src="{single.img}" alt="">
                                             {#if single.sub}
-                                            <div class="subhead mt-[10px]">
-                                                <p>{single.sub}</p>
-                                            </div>
+                                                <div class="subhead mt-[10px]">
+                                                    <p>{single.sub}</p>
+                                                </div>
                                             {/if}
                                             <div class="title">
                                                 <h3 clas="mt-[10px]">{single.title}</h3>
