@@ -42,8 +42,8 @@
                         <p>{i('home.topBlockText')}</p>
                     </div>
                 </div>
-                <div class="w-1/12 px-3"></div>
-                <div class="md:w-6/12 w-12/12 px-3 relative">
+                <div class="w-2/12 px-3"></div>
+                <div class="md:w-5/12 w-12/12 px-3 relative">
                     <div class="image-container-wrap">
                         <div class="image-container">
                             <video class="rounded-md withbg relative" autoplay muted loop>
@@ -55,7 +55,7 @@
                             <div class="before"></div>
                             <!--                        <img class="rounded-md withbg relative" src="/images/heroimg.jpg" alt="">-->
                         </div>
-                        <img class="rounded-md absolute z-[2] smaller" src="/images/balt.jpg" alt="">
+                        <img class="rounded-md absolute z-[2] smaller" src="/images/balliter.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@
       }
     }
     .smaller {
-      max-width: 268px;
+      max-width: 215px;
       left: 0;
       bottom: 0;
       @media screen and (max-width: 767px) {
@@ -187,7 +187,7 @@
 
     .image-container {
       //max-width: 532px;
-      height: 514px;
+      height: 414px;
       position: relative;
 
       video {
