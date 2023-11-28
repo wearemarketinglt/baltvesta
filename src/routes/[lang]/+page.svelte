@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-    <title>Baltvesta home page</title>
+    <title>Invest with Purpose, Invest for the Future - Baltvesta</title>
     <meta name="description" content="Make a positive impact and achieve long-term financial success by investing in sustainable and socially responsible companies."/>
 </svelte:head>
 
@@ -47,7 +47,7 @@
                     <div class="image-container-wrap">
                         <div class="image-container">
                             <video class="rounded-md withbg relative" autoplay muted loop>
-                                <source src="/baltvesta.mp4"
+                                <source src="/baltvesta_video.mp4"
                                         type="video/mp4">
                                 <!-- Add additional <source> elements for other video formats if required -->
                                 Your browser does not support the video tag.
@@ -55,7 +55,7 @@
                             <div class="before"></div>
                             <!--                        <img class="rounded-md withbg relative" src="/images/heroimg.jpg" alt="">-->
                         </div>
-                        <img class="rounded-md absolute z-[2] smaller" src="/images/heroimgsmall.jpg" alt="">
+                        <img class="rounded-md absolute z-[2] smaller" src="/images/balt.jpg" alt="">
                     </div>
                 </div>
             </div>
