@@ -71,8 +71,9 @@
                                     Subject
                                     <select id="select" name="select">
                                         <option value="" disabled selected>Choose topic</option>
-                                        <option value="">Subject</option>
-                                        <option value="">Subject</option>
+                                        <option value="">Investment proposal</option>
+                                        <option value="">Rent</option>
+                                        <option value="">Other</option>
                                     </select>
                                 </label>
                             </div>
@@ -96,20 +97,6 @@
                         <div class="single md:mb-[80px]">
                             <label>
                                 Contact us by phone or location
-                                <ul class="mt-[25px]">
-                                    <li><img src="/images/pin.svg" alt=""><a
-                                            href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos
-                                        av. 7, LT-09308 Vilnius</a></li>
-                                    <li><img src="/images/phone.svg" alt=""><a href="tel:+370 668 97952">+370 668
-                                        97952</a></li>
-                                    <li><img src="/images/mail.svg" alt=""><a href="mailto:office@baltvesta.lt">office@baltvesta.lt</a>
-                                    </li>
-                                </ul>
-                            </label>
-                        </div>
-                        <div class="single">
-                            <label>
-                                Interested in renting
                                 <ul class="mt-[25px]">
                                     <li><img src="/images/pin.svg" alt=""><a
                                             href="https://www.google.lt/maps/place/Konstitucijos+pr.+7,+09307+Vilnius/data=!4m2!3m1!1s0x46dd9403fe06eb77:0x36ff6b8e047ee2b3?sa=X&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAgtEAA&ved=2ahUKEwjJvszGvKmAAxW5JhAIHcPXBLIQ8gF6BAguEAI">Konstitucijos

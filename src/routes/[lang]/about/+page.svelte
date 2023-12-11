@@ -395,6 +395,10 @@
           &:not(:last-child) {
             margin-bottom: 100px;
           }
+          &:first-of-type {
+            border-top: none;
+          }
+          border-top: 1px solid rgba(11, 57, 84, 0.10);
 
           img {
             max-width: 175px;

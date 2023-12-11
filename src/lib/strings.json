@@ -39,7 +39,7 @@
         "cardSubTitle": "Real estate management and developments",
         "cardTitle": "Shaping and Upholding a Real Estate Future Rooted in Sustainable Principles",
         "cardText": "Our investments in commercial real estate aim to promote sustainable and innovative approaches to construction and urban development. Our unwavering commitment involves generating sustained value for our investors and fostering the betterment of local communities.",
-        "operatingBusiness": "We own 2 commercial properties and we are currently running two commercial real estate development projects to expand our portfolio and maximize returns.",
+        "operatingBusiness": "We own commercial properties and run two commercial real estate development projects to expand our portfolio and maximize returns.",
         "buttonText": "Learn more",
         "buttonLink": "/en/about?activeTab=1#forwardthinking",
         "img": "/images/card2.jpg"
@@ -207,9 +207,9 @@
       {
         "singles": [
           {
-            "img": "/images/flow.png",
-            "sub": "In development",
-            "title": "Shaping and upholding a real estate future rooted in sustainable principles",
+            "img": "",
+            "sub": "",
+            "title": "Unique office space in the CBD of Vilnius",
             "text": "<p>In development. Unique office space in the Central Business District of Vilnius with the highest standards for sustainability and focus on staff well-being, creative and inspiring environment.</p>",
             "linkText": "Discover more",
             "link": "https://flow.lt/",
@@ -230,17 +230,9 @@
           },
           {
             "img": "",
-            "sub": "In development",
-            "title": "Commercial and residential property in the thriving city area",
-            "text": "<p>Commercial and residential property in development in Mladost district, Sofia, the capital of Bulgaria, one of the most modern and fast thriving areas of the city.</p>",
-            "linkText": "",
-            "link": ""
-          },
-          {
-            "img": "",
-            "sub": "For rent",
+            "sub": "",
             "title": "Office, commercial and catering premises at Žirmūnų 68A, Vilnius",
-            "text": "<p>Siryjo lines is one of the companies of the Baltvesta group, managing more than 7 thousand sq.m. building in Žirmūnai, Vilnius, which has commercial premises for trade as well as catering services and business center Sirijus, which is a modern office premise. Our clients are divided in 3 areas:</p> <ul><li>Leisure and entertainment area: sports club People fitness, bowling club Žirmūnai bowling, billiards club Poolhouse, pizzeria Pizza Max, restaurant with Lithuanian dishes Laimas tavern, stuffed fried potatoes restaurant Ajomama.</li><li>Commercial premises: manufacturer of sprouted buckwheat bars Tundra snack, automatic laundry Londris, paint studio Himeja and heating, ventilation, air conditioning systems IDV Group.</li><li>Office premises: software manufacturer Matrix Software Baltic, logistics companies Alpha LT and Olersa, construction company Specto, design services company Urbanistikos formatas, structural design company IT ranga, board and biofuel seller Medinis namas LT, accounting company Finamber, footwear shop 3 KRM Baltic.</li></ul>",
+            "text": "<ul><li>Plot of land 0,69 ha</li><li>Total area of the building 6 800 sq.m.</li><li>Catering, entertainment, shopping and sports club premises 5 000 sqm.</li><li>Office space 1 100 sqm.</li><li>100 kW solar power plant on the roof of the building</li><li>Fast-charging electric vehicle charging stations outside the building</li></ul>",
             "linkText": "",
             "link": "",
             "cols": [
@@ -256,9 +248,9 @@
           },
           {
             "img": "",
-            "sub": "For rent",
+            "sub": "",
             "title": "Office and commercial premises Ukmergės str. 283B, Vilnius",
-            "text": "<p>Fabijoniškės is a residential area located in the north of the city, a district that is dominated by public buildings. It is a well-developed area with further commercial and residential development. The object is located between Ukmergė and Salomėja Neris streets, which are perfectly visible and accessible from both sides.</p><p>Ukmergės Street is one of the busiest streets in the capital, where A2 highway (Panevėžys – Riga) begins. It is one of the longest streets in the city, an important district connector leading to the city center and at the same time is the northern gate of the city. Average daily traffic intensity on Ukmergė Street fluctuates around 50 thousand vehicles.</p> <ul><li>1,840 m2 administrative</li><li>809 m2 commercial area</li><li>298 m2 clinic (medical)</li></ul>",
+            "text": "<ul><li>Plot of land 0,16 ha</li><li>Total area of the building 4 000 sq.m.</li><li>Office space 2100 sq.m.</li><li>Commercial premises 1000 sq.m.</li><li>Medical premises 300 sqm.</li><li>30 kW solar power plant on the roof of the building</li></ul>",
             "linkText": "",
             "link": "",
             "cols": [
@@ -275,6 +267,14 @@
                 "text": ""
               }
             ]
+          },
+          {
+            "img": "",
+            "sub": "",
+            "title": "Commercial and residential property in Sofia, Bulgaria",
+            "text": "<p>Commercial and residential property in development in Mladost district, Sofia, the capital of Bulgaria, one of the most modern and fast thriving areas of the city.</p>",
+            "linkText": "",
+            "link": ""
           }
         ]
       }
@@ -287,7 +287,7 @@
       {
         "img": "",
         "title": "Sanitas",
-        "text": "<p>Engaging in investments that contribute to the advancement of life-saving drugs and therapies through innovative pharmaceutical enterprises. Company was sold to Valeant Pharmaceuticals International in 2011. EV 365M (13.1x EV/EBITDA multiple) at the exit.</p><p>In 2003 together with business partners invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern European market.",
+        "text": "<p>In 2003 together with business partners Baltvesta invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern European market. Company was sold to Valeant Pharmaceuticals International in 2011 with EV 365M (13.1x EV/EBITDA multiple) at the exit.</p>",
         "linkText": "",
         "link": "",
         "cols": [
