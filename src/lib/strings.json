@@ -193,11 +193,11 @@
                 "text": "unique production facilities in Lithuania and Germany"
               },
               {
-                "title": "835",
+                "title": "800+",
                 "text": "employees"
               },
               {
-                "title": "88 M",
+                "title": "90 M",
                 "text": "annual income"
               }
             ]
@@ -232,16 +232,16 @@
             "img": "",
             "sub": "",
             "title": "Office, commercial and catering premises at Žirmūnų 68A, Vilnius",
-            "text": "<ul><li>Plot of land 0,69 ha</li><li>Total area of the building 6 800 sq.m.</li><li>Catering, entertainment, shopping and sports club premises 5 000 sqm.</li><li>Office space 1 100 sqm.</li><li>100 kW solar power plant on the roof of the building</li><li>Fast-charging electric vehicle charging stations outside the building</li></ul>",
+            "text": "<ul><li>Total area of the building 6 800 sq.m</li><li>Catering, entertainment, shopping and sports club premises 5 000 sq.m</li><li>Office space 1 100 sq.m</li><li>100 kW solar power plant on the roof of the building</li><li>Fast-charging electric vehicle charging stations outside the building</li></ul>",
             "linkText": "",
             "link": "",
             "cols": [
               {
-                "title": "Office size (20-200 sq.m.)",
+                "title": "6 800 sq.m",
                 "text": ""
               },
               {
-                "title": "Distance to city centre – 3km",
+                "title": "100 kW solar power plant (roof)",
                 "text": ""
               }
             ]
@@ -250,20 +250,16 @@
             "img": "",
             "sub": "",
             "title": "Office and commercial premises Ukmergės str. 283B, Vilnius",
-            "text": "<ul><li>Plot of land 0,16 ha</li><li>Total area of the building 4 000 sq.m.</li><li>Office space 2100 sq.m.</li><li>Commercial premises 1000 sq.m.</li><li>Medical premises 300 sqm.</li><li>30 kW solar power plant on the roof of the building</li></ul>",
+            "text": "<ul><li>Total area of the building 4 000 sq.m</li><li>Office space 2100 sq.m</li><li>Commercial premises 1000 sq.m</li><li>Medical premises 300 sq.m</li><li>30 kW solar power plant on the roof of the building</li></ul>",
             "linkText": "",
             "link": "",
             "cols": [
               {
-                "title": "1,164 m2 parking",
+                "title": "4 000 sq.m",
                 "text": ""
               },
               {
                 "title": "30 kW solar power plant (roof)",
-                "text": ""
-              },
-              {
-                "title": "Number of parking spaces: 65",
                 "text": ""
               }
             ]
@@ -287,7 +283,7 @@
       {
         "img": "",
         "title": "Sanitas",
-        "text": "<p>In 2003 together with business partners Baltvesta invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern European market. Company was sold to Valeant Pharmaceuticals International in 2011 with EV 365M (13.1x EV/EBITDA multiple) at the exit.</p>",
+        "text": "<p>In 2003 together with business partners Baltvesta invested in Sanitas, generic pharmaceutical manufacturer. Subject to restructuring of management, good manufacturing practice (GMP) certificate and acquisition of companies in Slovakia and Poland, Sanitas grown about 10 times and became a significant player in the Central and Eastern</p><p> In 2011 Sanitas was sold to Valeant Pharmaceuticals International with EV 365M (13.1x EV/EBITDA multiple) at the exit.</p>",
         "linkText": "",
         "link": "",
         "cols": [
