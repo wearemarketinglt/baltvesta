@@ -58,23 +58,23 @@
     <div class="container mx-auto">
         <div class="px-3">
             <div class="flex justify-between items-center">
-                <a href="/"><img class="logo" src="/images/logo.svg" alt=""></a>
+                <a href="/en"><img class="logo" src="/images/logo.svg" alt=""></a>
                 <ul class="lg:flex hidden">
                     <li>
-                        <a class="link dark" href="/about">About us</a>
+                        <a class="link dark" href="/en/about">About us</a>
                     </li>
                     <li>
-                        <a class="link dark" href="/about#forwardthinking">Investments</a>
+                        <a class="link dark" href="/en/about#forwardthinking">Investments</a>
                         <ul class="sub-menu rounded-md">
-                            <li><a class="link" href="/about?activeTab=0#forwardthinking">Metal processing</a></li>
-                            <li><a class="link" href="/about?activeTab=1#forwardthinking">Real estate</a></li>
+                            <li><a class="link" href="/en/about?activeTab=0#forwardthinking">Metal processing</a></li>
+                            <li><a class="link" href="/en/about?activeTab=1#forwardthinking">Real estate</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="link dark" href="/exits">Success stories</a>
+                        <a class="link dark" href="/en/exits">Success stories</a>
                     </li>
                     <li>
-                        <a class="link dark" href="/contacts">Contact us</a>
+                        <a class="link dark" href="/en/contacts">Contact us</a>
                     </li>
                 </ul>
                 <div class="ham lg:hidden flex">
