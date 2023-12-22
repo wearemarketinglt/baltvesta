@@ -1,0 +1,104 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/lt"
+    },
+    {
+      "source": "/lt/",
+      "destination": "/"
+    },
+    {
+      "source": "/en/",
+      "destination": "/"
+    },
+    {
+      "source": "/de/",
+      "destination": "/"
+    },
+    {
+      "source": "/apie-mus/",
+      "destination": "/about-us/"
+    },
+    {
+      "source": "/metalo-apdirbimas/",
+      "destination": "/metal-processing/"
+    },
+    {
+      "source": "/valdomas-nekilnojamasis-turtas/",
+      "destination": "/real-estate-management/"
+    },
+    {
+      "source": "/vystomas-nekilnojamasis-turtas/",
+      "destination": "/real-estate-development/"
+    },
+    {
+      "source": "/igyvendinti-projektai/",
+      "destination": "/exited-investments/"
+    },
+    {
+      "source": "/kontaktai/",
+      "destination": "/contacts/"
+    },
+    {
+      "source": "/duomenu-apsauga/",
+      "destination": "/privacy-and-cookie-policy/"
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/en/about"
+    },
+    {
+      "source": "/metal-processing/",
+      "destination": "/en/about?activeTab=0#forwardthinking"
+    },
+    {
+      "source": "/real-estate-management/",
+      "destination": "/en/about?activeTab=0#forwardthinking"
+    },
+    {
+      "source": "/real-estate-development/",
+      "destination": "/en/about?activeTab=1#forwardthinking"
+    },
+    {
+      "source": "/exited-investments/",
+      "destination": "/en/exits"
+    },
+    {
+      "source": "/contacts/",
+      "destination": "/en/contacts"
+    },
+    {
+      "source": "/privacy-and-cookie-policy/",
+      "destination": "/en"
+    },
+    {
+      "source": "/ueber-uns/",
+      "destination": "/"
+    },
+    {
+      "source": "/metallverarbeitung/",
+      "destination": "/"
+    },
+    {
+      "source": "/immobilienverwaltung/",
+      "destination": "/"
+    },
+    {
+      "source": "/immobilienentwicklung/",
+      "destination": "/"
+    },
+    {
+      "source": "/durchgefuehrte-projekte/",
+      "destination": "/exited-investments/"
+    },
+    {
+      "source": "/kontakt/",
+      "destination": "/contacts/"
+    },
+    {
+      "source": "/datenschutzerklarung-und-cookies/",
+      "destination": "/privacy-and-cookie-policy/"
+    }
+  ]
+}
