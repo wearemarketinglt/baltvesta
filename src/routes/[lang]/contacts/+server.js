@@ -14,7 +14,7 @@ export async function POST({ request }) {
     const details = formData.get('details');
 
     const res = await resend.emails.send({
-        from: 'Balvetsa.dev <no-reply@baltvesta.dev>',
+        from: 'baltvesta.lt <no-reply@wam.lt>',
         to: ['ignas.cijunaitis@gmail.com'],
         subject: 'Užklausa iš baltvesta.dev',
         html: `
