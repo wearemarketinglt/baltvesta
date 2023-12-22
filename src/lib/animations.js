@@ -227,16 +227,15 @@ export function initializeGsapTextScrollAnimation() {
 };
 
 export function initializeLeis() {
-    const lenis = new Lenis();
-
-    lenis.on('scroll', (e) => {
-        // Your scroll event handling code here
-    });
+    const lenis = new Lenis({
+        duration: 2,
+        wheelMultiplier: 0.75,
+    })
 
     function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
+        lenis.raf(time)
+        requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf);
+    requestAnimationFrame(raf)
 };

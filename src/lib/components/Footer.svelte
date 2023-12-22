@@ -1,5 +1,15 @@
 <script>
     import Button from '$lib/components/Button.svelte';
+
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        // Get the current year
+        var currentYear = new Date().getFullYear();
+
+        // Update the copyright text
+        document.getElementById("copyright").innerText = "© " + currentYear + ". All rights reserved.";
+    });
 </script>
 
 <div class="cta">
@@ -51,7 +61,7 @@
         <div class="bottom">
             <div class="flex justify-between items-center">
                 <div class="w-6/12">
-                    <p>© 2021. All rights reserved.</p>
+                    <p id="copyright"></p>
                 </div>
             </div>
         </div>

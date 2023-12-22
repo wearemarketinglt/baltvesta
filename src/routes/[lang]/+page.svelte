@@ -8,6 +8,7 @@
 
     import {initializePreloader} from '$lib/animations';
     import {initializeGsapTextScrollAnimation} from '$lib/animations';
+    import {initializeLeis} from "../../lib/animations";
 
     import {onMount} from 'svelte';
 

@@ -17,7 +17,7 @@
             company: data.get('company')
         }
 
-        if(!formData.name || !formData.email || !formData.company) {
+        if (!formData.name || !formData.email || !formData.company) {
             responseMessage = 'Prašome užpildyti visus laukelius.';
             toggleResponse()
             return
@@ -28,7 +28,7 @@
             body: data
         })
 
-        if(res.status === 200) {
+        if (res.status === 200) {
             form.classList.add('hidden')
             formResponse.classList.add('visible')
         } else {
@@ -69,12 +69,17 @@
                                 </label>
                                 <label for="select">
                                     Subject
-                                    <select id="select" name="select">
-                                        <option value="Choose topic" disabled selected>Choose topic</option>
-                                        <option value="Investment proposal">Investment proposal</option>
-                                        <option value="Rent">Rent</option>
-                                        <option value="Other">Other</option>
-                                    </select>
+                                    <div class="select-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                                            <path d="M1 1.14062L5.5 5.64062L10 1.14062" stroke="#033546" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <select id="select" name="select">
+                                            <option value="Choose topic" disabled selected>Choose topic</option>
+                                            <option value="Investment proposal">Investment proposal</option>
+                                            <option value="Rent">Rent</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
                                 </label>
                             </div>
                             <label for="email">
@@ -121,6 +126,7 @@
 
     .right {
       position: relative;
+
       &:before {
         content: '';
         position: absolute;
@@ -143,6 +149,7 @@
         gap: 34px;
         position: relative;
         transition: all 0.5s ease-in-out;
+
         &:global(.hidden) {
           opacity: 0;
         }
@@ -163,6 +170,7 @@
           border-radius: 5px;
           line-height: 1;
           width: 100%;
+          font-weight: 500;
         }
 
         input, textarea {
@@ -177,8 +185,23 @@
           height: 116px;
         }
 
-        select {
+        .select-wrap {
           margin-top: 10px;
+          display: flex;
+          height: 100%;
+          position: relative;
+          svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 9px;
+            right: 16px;
+          }
+        }
+        select {
+
+          -webkit-appearance: none;
+          -moz-appearance: none;
         }
 
         button {
@@ -188,12 +211,14 @@
           border-radius: 10px;
         }
       }
+
       .response {
         opacity: 0;
         transition: all 0.5s ease-in-out;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+
         &:global(.visible) {
           opacity: 1;
         }
