@@ -12,14 +12,6 @@
     import {onMount, tick} from 'svelte';
 
 
-    let activeTab = 0; // Set the default active tab
-
-    // Get the URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const activeTabParam = urlParams.get('activeTab');
-    activeTab = parseInt(activeTabParam, 10) || 0;
-
-
     onMount(async () => {
         await tick(); // Wait for the component to render
 
