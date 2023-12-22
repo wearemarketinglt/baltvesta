@@ -70,10 +70,10 @@
                                 <label for="select">
                                     Subject
                                     <select id="select" name="select">
-                                        <option value="" disabled selected>Choose topic</option>
-                                        <option value="">Investment proposal</option>
-                                        <option value="">Rent</option>
-                                        <option value="">Other</option>
+                                        <option value="Choose topic" disabled selected>Choose topic</option>
+                                        <option value="Investment proposal">Investment proposal</option>
+                                        <option value="Rent">Rent</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </label>
                             </div>

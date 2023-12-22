@@ -16,7 +16,7 @@ export async function POST({ request }) {
     const res = await resend.emails.send({
         from: 'baltvesta.lt <no-reply@wam.lt>',
         to: ['ignas.cijunaitis@gmail.com'],
-        subject: 'Užklausa iš baltvesta.dev',
+        subject: 'Užklausa iš baltvesta.lt',
         html: `
             Vardas: ${name}<br>
             Pavardė: ${surname}<br>
